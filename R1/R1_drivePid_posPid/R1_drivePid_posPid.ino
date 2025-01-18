@@ -3,7 +3,7 @@
 IntervalTimer rpm_timer;
 IntervalTimer ps4_timer;
 IntervalTimer pid_timer;
-IntervalTimer pos_pid_timer;
+IntervalTimer pos_pid_timer;//Hardware interrupt timers
 
 
 int pwm_pin[3] = { 3, 7, 5};
@@ -44,7 +44,7 @@ int max_rpm = 200;//hello.....
 USBHost myusb;
 JoystickController joystick1(myusb);
 // BluetoothController bluet(myusb, true, "0000");   // Version does pairing to device
-BluetoothController bluet(myusb);   // version assumes it already was paireduint32_t buttons_prev = 0;
+BluetoothController bluet(myusb);   // version assumes it already was paired
 uint32_t buttons;
 
 int psAxis[64];
