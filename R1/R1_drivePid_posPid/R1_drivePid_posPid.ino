@@ -5,8 +5,24 @@ IntervalTimer ps4_timer;
 IntervalTimer pid_timer;
 IntervalTimer pos_pid_timer;//Hardware interrupt timers
 
-
-int pwm_pin[3] = { 3, 7, 5};
+                                                        ____________________________________________  
+                                                       |               |  pin[0]  |                |
+                                                       |               |          |                |                                                                              
+                                                       |               |__________|                |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |               
+                                                       |                                           |   
+                                                       |_________                         _________|   
+                                                       |        |                        |         |
+                                                       | pin[1] |                        | pin[2]  |
+                                                       |________|________________________|_________|      
+                                                        
+                                                          
+int pwm_pin[3] = { 3, 7, 5};                            
 int dir_pin[3] = { 2, 6, 4};
 
 
@@ -292,3 +308,4 @@ if (millis() - lastTime > 1000) {
     }
 
 }
+                                           |
