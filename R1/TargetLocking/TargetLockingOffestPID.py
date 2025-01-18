@@ -4,7 +4,7 @@ import cv2
 import serial
 import time
 
-# Constants
+# #Constants
 TEENSY_PORT = "/dev/tty.usbmodem166413901"
 BAUD_RATE = 2000000
 CONFIDENCE_THRESHOLD = 0.25
