@@ -1,0 +1,8 @@
+path: C:\Users/ANANT AGARWAL/Desktop/TrainDataset
+train: images/train
+val: images/val
+
+names:
+    0: outer
+    1: inner
+    2: basket

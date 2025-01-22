@@ -1,0 +1,1 @@
+  showplot(image_height,image_width,np.array(outercor))#Visualize the outer coords

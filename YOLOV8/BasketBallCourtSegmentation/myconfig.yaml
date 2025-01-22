@@ -1,0 +1,6 @@
+path: C:/ROBOCON/YOLOV8/traindata
+train: images/train
+val: images/train
+
+names:
+  0: basketball
