@@ -6,8 +6,8 @@ IntervalTimer pid_timer;
 IntervalTimer pos_pid_timer;
 
 
-int pwm_pin[3] = { 3, 7, 5};
-int dir_pin[3] = { 2, 6, 4};
+int pwm_pin[3] = { 3, 5, 7};
+int dir_pin[3] = { 2, 4, 6};
 
 
 Encoder m[3] = { Encoder(28, 27), Encoder(31, 30), Encoder(12, 11) };

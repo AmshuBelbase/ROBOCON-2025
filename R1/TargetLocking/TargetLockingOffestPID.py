@@ -36,18 +36,19 @@ while cap.isOpened():
     if not ret:
         break
 
-    frame_count += 1
-    if frame_count % FRAME_SKIP != 0:
-        continue  # Skip frames for performance
+    # frame_count += 1
+    # if frame_count % FRAME_SKIP != 0:
+    #     continue  # Skip frames for performance
 
     # Frame dimensions and thresholds
     frame_width = frame.shape[1]
     frame_height = frame.shape[0]
-    right_threshold = frame_width / 2.0 + frame_width * 0.05
-    left_threshold = frame_width / 2.0 - frame_width * 0.05
+    right_threshold = frame_width / 2.0 + frame_width * 0.01
+    left_threshold = frame_width / 2.0 - frame_width * 0.01
 
     # YOLO Inference
-    results = model.predict(source=frame, conf=CONFIDENCE_THRESHOLD, save=False,)#56 show=True)
+    results = model.predict(source=frame, conf=CONFIDENCE_THRESHOLD, save=False,device="mps")#56 show=True)
+    cv2.imshow("Frame",results[0].plot())
 
     # Process detections
     for detection in results[0].boxes:
@@ -58,7 +59,7 @@ while cap.isOpened():
         class_name = results[0].names.get(class_id, "Unknown")
 
         if class_name != "basket":
-            ser.write(b"\n")  # Send default signal
+            ser.write(b"n")  # Send default signal
             continue
 
         # Calculate distance and offset
@@ -77,10 +78,12 @@ while cap.isOpened():
             angle = -1*calculate_angle(error_offset, frame_height - y_center)
             print(error_offset)
             data = f"{-1*error_offset}\n"
-        # else:
-        #     data = "\n"  # Centered, no angle adjustment needed
+        else:
+            data = "o"  # Centered, no angle adjustment needed
 
             ser.write(data.encode())
+    if cv2.waitKey(1)==ord('q'):
+        break
 
 # Cleanup
 cap.release()
