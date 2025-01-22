@@ -1,18 +1,18 @@
-#include <Encoder.h>
+#include <Encoder.h>//
 #include <stdio.h>
-IntervalTimer pos_pid_timer;
-IntervalTimer serial_input_timer;
+IntervalTimer pos_pid_timer;//Hardware interrupt timer for the position based PID controller
+IntervalTimer serial_input_timer;//Hardware interrupt timer for taking serial input
 Encoder enc1(9, 8);
 
 int shooter_rotation_pwm = 1;
 int shooter_rotation_dir = 0;
 float shooter_rotation_cpr = 17500;
-volatile float kP = 80, kI = 1, kD = 10;
+volatile float kP = 80, kI = 1, kD = 10; //declared as volatile to avoid confliction during interruption
 
-volatile int error_offset = 0;
+volatile int error_offset = 0;//''
 
 float ap = 0.0;
-volatile float sp_angle = 0.0;
+volatile float sp_angle = 0.0;//''
 //char dir=0;
 void setup() {
   pinMode(13, OUTPUT);
@@ -21,11 +21,11 @@ void setup() {
   pinMode(shooter_rotation_pwm, OUTPUT);
   pinMode(shooter_rotation_dir, OUTPUT);
 
-  analogWriteResolution(14);
-  serial_input_timer.begin(serial_input,10000);
-  pos_pid_timer.begin(pos_pid, 10000);
+  analogWriteResolution(14);//2^14 bit resolution for PWM values
+  serial_input_timer.begin(serial_input,10000);//the respective functions will be called at 
+  pos_pid_timer.begin(pos_pid, 10000);//10000 us means every 10ms to us precision
 
-  pos_pid_timer.priority(1);
+  pos_pid_timer.priority(1);//higher priority is given to PID controller due to being time sensitive
   serial_input_timer.priority(0);
 }
 void setPosition(int speed) {
@@ -48,8 +48,8 @@ int inputIndex = 0;
 volatile bool track=false;
 
 
-void serial_input() {
-    while (Serial.available() > 0) {
+void serial_input() {// this function takes the value of offset pixel from 
+    while (Serial.available() > 0) {//corresponding python script of targetlocking
         char received = Serial.read();
         if (received == '\n') { // End of input
             inputBuffer[inputIndex] = '\0'; // Null-terminate

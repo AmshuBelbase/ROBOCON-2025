@@ -3,11 +3,33 @@
 IntervalTimer rpm_timer;
 IntervalTimer ps4_timer;
 IntervalTimer pid_timer;
-IntervalTimer pos_pid_timer;
+IntervalTimer pos_pid_timer;//Hardware interrupt timers
 
+<<<<<<< HEAD
 
 int pwm_pin[3] = { 3, 5, 7};
 int dir_pin[3] = { 2, 4, 6};
+=======
+                                                        ____________________________________________  
+                                                       |               |  pin[0]  |                |
+                                                       |               |          |                |                                                                              
+                                                       |               |__________|                |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |
+                                                       |                                           |               
+                                                       |                                           |   
+                                                       |_________                         _________|   
+                                                       |        |                        |         |
+                                                       | pin[1] |                        | pin[2]  |
+                                                       |________|________________________|_________|      
+                                                        
+                                                          
+int pwm_pin[3] = { 3, 7, 5};                            
+int dir_pin[3] = { 2, 6, 4};
+>>>>>>> refs/remotes/origin/Siddhant
 
 
 Encoder m[3] = { Encoder(28, 27), Encoder(31, 30), Encoder(12, 11) };
@@ -44,7 +66,7 @@ int max_rpm = 200;//hello.....
 USBHost myusb;
 JoystickController joystick1(myusb);
 // BluetoothController bluet(myusb, true, "0000");   // Version does pairing to device
-BluetoothController bluet(myusb);   // version assumes it already was paireduint32_t buttons_prev = 0;
+BluetoothController bluet(myusb);   // version assumes it already was paired
 uint32_t buttons;
 
 int psAxis[64];
@@ -292,3 +314,4 @@ if (millis() - lastTime > 1000) {
     }
 
 }
+                                           |
