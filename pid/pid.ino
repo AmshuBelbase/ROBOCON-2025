@@ -13,17 +13,19 @@ BluetoothController bluet(myusb, true, "0000");   // Version does pairing to dev
 //coordinates of joystick (x,y -> right joystick; leftX -> left joystick)
 int y; 
 
-int PWM = 1;
+// motor pins
+int PWM = 1;      
 int DIR = 0;
+
 volatile long encoderCounts = 0;  // Shared variable to track encoder counts
 volatile long lastCount = 0;      
 volatile double rpm = 0;          // Stores the calculated RPM
 long positionChange;
 
 //pid constants
-float kp = 0.0;
-float ki = 0.0;
-float kd = 0.0;   
+float kp = 0.0;    // 20
+float ki = 0.0;    // 80
+float kd = 0.0;    // 0.5
 
 float sp=0.0;
 float pid=0.0;
@@ -100,7 +102,7 @@ void calculatePID() {
 
   unsigned long currentTime = micros();
   unsigned long time = currentTime-startTime;
-  Serial.println(time);
+  // Serial.println(time);
   
 }
 

@@ -127,9 +127,9 @@ void loop() {
   Serial.println(rpm5);
 
   // Calculate wheel speeds based on inverse kinematics
-  int V1 = ((x) * (-0.67) + (y) * 0 + (leftX) * (0.33));        
-  int V2 = ((x) * (0.33) + (y) * (-0.57) + (leftX) * (0.33)); 
-  int V3 = ((x) * (0.33) + (y) * (0.57) + (leftX) * (0.33)); 
+    int V1 = ((x) * (-0.67) + (y) * 0 + (leftX) * (0.33));        
+    int V2 = ((x) * (0.33) + (y) * (-0.57) + (leftX) * (0.33)); 
+    int V3 = ((x) * (0.33) + (y) * (0.57) + (leftX) * (0.33)); 
 
 
 
