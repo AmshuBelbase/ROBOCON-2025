@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>2001384</id>
+      <size>334</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2025-02-01 15:17:51.880066+00:00</created>
+      <updated>2025-02-12 14:56:10.266123+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>333</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>2003864</id>
+          <start>0</start>
+          <stop>333</stop>
+          <url>https://app.cvat.ai/api/jobs/2001384</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>anant5</username>
+        <email>anant22saawara@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>backboard</name>
+          <color>#d57119</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2025-02-13 12:26:49.085040+00:00</dumped>
+  </meta>
+  <image id="0" name="image1122.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="530.10" ytl="665.57" xbr="731.30" ybr="818.11" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="539.31,669.10;728.92,692.33;726.02,814.00;537.27,801.22" z_order="0">
+    </points>
+  </image>
+  <image id="1" name="image1123.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="536.06,667.46;725.77,689.24;724.32,812.64;534.37,800.55" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="524.73" ytl="663.41" xbr="728.92" ybr="818.47" z_order="0">
+    </box>
+  </image>
+  <image id="2" name="image1124.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="533.81,666.29;724.36,688.27;720.53,812.08;532.39,798.17" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="525.43" ytl="662.37" xbr="727.18" ybr="816.38" z_order="0">
+    </box>
+  </image>
+  <image id="3" name="image1126.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="529.37,661.45;721.14,683.43;718.52,807.24;527.55,792.52" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="520.48" ytl="660.03" xbr="723.27" ybr="810.21" z_order="0">
+    </box>
+  </image>
+  <image id="4" name="image1128.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="512.81" ytl="654.46" xbr="719.79" ybr="808.12" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="525.13,657.01;715.69,677.78;712.47,800.38;521.91,789.09" z_order="0">
+    </points>
+  </image>
+  <image id="5" name="image1129.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="509.68" ytl="649.58" xbr="719.09" ybr="804.64" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="523.12,655.00;714.28,675.36;710.85,796.55;521.10,785.30" z_order="0">
+    </points>
+  </image>
+  <image id="6" name="image1131.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="518.68,646.33;714.28,668.31;711.26,794.74;516.26,779.61" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="508.63" ytl="644.00" xbr="717.35" ybr="796.97" z_order="0">
+    </box>
+  </image>
+  <image id="7" name="image1133.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="519.72,641.13;716.75,664.94;713.81,790.41;519.16,776.97" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="510.37" ytl="638.43" xbr="719.79" ybr="794.53" z_order="0">
+    </box>
+  </image>
+  <image id="8" name="image1136.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="528.76" ytl="635.84" xbr="731.97" ybr="787.63" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="534.00,639.41;727.25,660.43;725.95,781.97;531.70,769.01" z_order="0">
+    </points>
+  </image>
+  <image id="9" name="image1138.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="534.84,628.92;734.04,651.96;730.20,777.60;532.08,764.40" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="524.58" ytl="626.64" xbr="736.15" ybr="780.10" z_order="0">
+    </box>
+  </image>
+  <image id="10" name="image1140.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="529.18" ytl="620.79" xbr="741.17" ybr="776.76" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="540.30,623.00;741.00,643.90;738.30,773.10;536.70,757.10" z_order="0">
+    </points>
+  </image>
+  <image id="11" name="image1141.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="541.06,618.30;742.54,640.59;738.91,767.25;539.16,753.25" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="530.85" ytl="615.77" xbr="745.77" ybr="770.48" z_order="0">
+    </box>
+  </image>
+  <image id="12" name="image1143.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="538.38" ytl="610.76" xbr="756.23" ybr="764.21" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="551.08,612.60;753.43,632.64;745.60,761.20;546.07,746.69" z_order="0">
+    </points>
+  </image>
+  <image id="13" name="image1145.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="551.64,607.80;756.84,630.60;751.68,757.80;547.32,743.88" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="541.72" ytl="605.32" xbr="759.57" ybr="761.28" z_order="0">
+    </box>
+  </image>
+  <image id="14" name="image1146.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="545.90" ytl="602.39" xbr="764.59" ybr="758.78" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="556.32,604.70;762.10,626.59;756.19,754.32;553.01,739.78" z_order="0">
+    </points>
+  </image>
+  <image id="15" name="image1147.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="560.64,603.00;765.72,623.52;761.70,751.90;556.32,738.96" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="547.99" ytl="600.72" xbr="767.93" ybr="754.59" z_order="0">
+    </box>
+  </image>
+  <image id="16" name="image1148.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="564.21,602.57;767.77,621.58;765.52,750.66;560.24,738.05" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="552.17" ytl="599.47" xbr="770.86" ybr="753.76" z_order="0">
+    </box>
+  </image>
+  <image id="17" name="image1150.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="570.30,600.00;773.60,615.90;771.40,746.80;565.50,732.50" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="558.45" ytl="594.03" xbr="778.39" ybr="750.00" z_order="0">
+    </box>
+  </image>
+  <image id="18" name="image1152.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="563.46" ytl="593.61" xbr="784.66" ybr="747.90" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="572.70,594.70;782.40,614.30;777.10,745.50;568.60,732.80" z_order="0">
+    </points>
+  </image>
+  <image id="19" name="image1153.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="567.23" ytl="592.78" xbr="787.59" ybr="747.49" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="576.27,592.65;786.33,613.81;780.11,742.78;571.92,731.79" z_order="0">
+    </points>
+  </image>
+  <image id="20" name="image1155.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="575.17" ytl="587.76" xbr="799.71" ybr="741.21" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="586.27,589.58;797.38,608.02;791.18,736.18;581.50,727.50" z_order="0">
+    </points>
+  </image>
+  <image id="21" name="image1157.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="600.82,591.62;812.33,608.54;803.37,736.93;595.35,725.74" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="585.63" ytl="588.59" xbr="814.76" ybr="741.21" z_order="0">
+    </box>
+  </image>
+  <image id="22" name="image1160.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="616.60" ytl="583.99" xbr="844.03" ybr="736.20" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="628.74,588.92;840.03,603.85;831.74,731.59;622.10,722.88" z_order="0">
+    </points>
+  </image>
+  <image id="23" name="image1162.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="632.04" ytl="580.23" xbr="860.34" ybr="731.18" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="640.55,583.95;855.79,595.97;848.74,727.02;635.79,718.11" z_order="0">
+    </points>
+  </image>
+  <image id="24" name="image1164.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="655.32,581.91;869.56,597.09;861.85,727.23;650.09,719.52" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="647.51" ytl="579.81" xbr="873.30" ybr="731.18" z_order="0">
+    </box>
+  </image>
+  <image id="25" name="image1165.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="650.85" ytl="577.72" xbr="879.58" ybr="729.09" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="657.97,581.04;875.70,597.42;869.27,724.95;652.37,719.35" z_order="0">
+    </points>
+  </image>
+  <image id="26" name="image1167.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="665.85,578.76;886.07,593.90;879.23,729.51;661.71,718.11" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="658.80" ytl="577.30" xbr="889.61" ybr="732.85" z_order="0">
+    </box>
+  </image>
+  <image id="27" name="image1169.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="659.22" ytl="577.30" xbr="895.88" ybr="730.76" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="669.17,579.18;891.87,594.52;885.86,727.65;663.99,717.90" z_order="0">
+    </points>
+  </image>
+  <image id="28" name="image1170.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="673.98,581.17;894.20,592.11;887.97,722.75;669.00,713.79" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="659.22" ytl="578.56" xbr="898.39" ybr="729.51" z_order="0">
+    </box>
+  </image>
+  <image id="29" name="image1171.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="677.46,578.76;897.68,591.20;891.67,724.12;671.66,716.03" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="667.16" ytl="575.21" xbr="902.16" ybr="727.83" z_order="0">
+    </box>
+  </image>
+  <image id="30" name="image1172.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="675.61,576.30;898.27,588.15;893.39,722.30;672.47,711.50" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="665.49" ytl="573.54" xbr="902.99" ybr="726.16" z_order="0">
+    </box>
+  </image>
+  <image id="31" name="image1174.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="671.34" ytl="565.60" xbr="906.34" ybr="721.56" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="676.97,569.19;902.06,583.83;898.27,717.28;675.92,707.52" z_order="0">
+    </points>
+  </image>
+  <image id="32" name="image1176.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="669.67" ytl="560.58" xbr="905.08" ybr="714.87" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="678.83,562.20;902.66,577.20;900.72,712.47;674.72,703.27" z_order="0">
+    </points>
+  </image>
+  <image id="33" name="image1177.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="673.85" ytl="560.58" xbr="910.52" ybr="714.90" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="682.17,562.54;907.79,575.31;901.70,711.90;677.52,702.79" z_order="0">
+    </points>
+  </image>
+  <image id="34" name="image1179.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="685.12,560.50;910.89,572.36;907.98,708.35;680.28,699.40" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="678.45" ytl="557.23" xbr="911.77" ybr="712.36" z_order="0">
+    </box>
+  </image>
+  <image id="35" name="image1181.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="680.12" ytl="558.49" xbr="919.30" ybr="711.11" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="688.75,559.05;916.94,570.42;911.86,708.11;683.91,698.67" z_order="0">
+    </points>
+  </image>
+  <image id="37" name="image1186.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="701.74,540.06;936.40,553.70;930.67,691.64;697.21,682.23" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="694.76" ytl="538.42" xbr="940.62" ybr="695.22" z_order="0">
+    </box>
+  </image>
+  <image id="39" name="image1189.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="709.35,535.46;951.94,547.74;947.18,685.74;704.65,677.37" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="701.45" ytl="533.40" xbr="956.09" ybr="689.78" z_order="0">
+    </box>
+  </image>
+  <image id="40" name="image1191.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="707.30" ytl="532.56" xbr="961.53" ybr="685.60" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="716.72,532.63;956.86,546.28;950.18,682.17;711.21,675.78" z_order="0">
+    </points>
+  </image>
+  <image id="42" name="image1194.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="704.79" ytl="530.05" xbr="953.59" ybr="682.26" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="710.30,531.20;948.73,543.08;945.54,680.14;707.14,676.07" z_order="0">
+    </points>
+  </image>
+  <image id="43" name="image1195.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="699.36" ytl="530.89" xbr="948.99" ybr="681.84" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="705.60,532.30;946.22,540.90;941.62,680.28;701.33,675.93" z_order="0">
+    </points>
+  </image>
+  <image id="44" name="image1196.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="699.78" ytl="530.89" xbr="942.71" ybr="683.51" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="707.38,534.37;938.72,541.39;937.02,680.04;702.30,674.48" z_order="0">
+    </points>
+  </image>
+  <image id="48" name="image1203.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="672.20" ytl="535.90" xbr="922.23" ybr="688.11" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="675.93,538.24;917.90,545.74;917.18,685.36;673.51,683.19" z_order="0">
+    </points>
+  </image>
+  <image id="49" name="image1205.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="664.65" ytl="531.73" xbr="911.77" ybr="680.58" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="667.94,534.03;906.98,537.52;905.58,676.90;669.34,675.85" z_order="0">
+    </points>
+  </image>
+  <image id="50" name="image1208.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="656.62,531.18;898.79,533.21;897.92,676.07;653.13,676.07" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="651.27" ytl="529.64" xbr="902.99" ybr="678.91" z_order="0">
+    </box>
+  </image>
+  <image id="52" name="image1212.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="642.91" ytl="528.38" xbr="899.65" ybr="678.49" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="646.74,530.89;893.27,529.72;892.69,669.68;646.45,676.07" z_order="0">
+    </points>
+  </image>
+  <image id="55" name="image1217.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="642.91" ytl="547.62" xbr="898.39" ybr="700.24" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="646.74,554.12;892.69,548.60;893.27,692.04;645.87,696.69" z_order="0">
+    </points>
+  </image>
+  <image id="56" name="image1218.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="640.40" ytl="553.47" xbr="895.47" ybr="705.25" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="645.52,555.38;891.73,555.99;891.13,695.33;644.91,700.57" z_order="0">
+    </points>
+  </image>
+  <image id="57" name="image1219.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="647.74,561.63;892.54,560.42;893.34,700.77;647.54,703.39" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="642.91" ytl="556.82" xbr="897.97" ybr="706.09" z_order="0">
+    </box>
+  </image>
+  <image id="60" name="image1224.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="640.82" ytl="567.27" xbr="900.90" ybr="718.63" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="644.42,571.54;895.01,570.38;896.47,712.08;645.29,715.27" z_order="0">
+    </points>
+  </image>
+  <image id="61" name="image1225.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="649.93,576.54;896.28,578.98;896.98,718.36;648.18,720.80" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="646.26" ytl="573.12" xbr="901.32" ybr="723.23" z_order="0">
+    </box>
+  </image>
+  <image id="65" name="image1234.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="639.27,579.98;887.90,582.60;881.85,726.38;629.99,719.93" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="626.18" ytl="577.72" xbr="890.45" ybr="729.51" z_order="0">
+    </box>
+  </image>
+  <image id="67" name="image1237.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="649.07,567.52;900.48,569.94;892.98,713.19;641.32,707.87" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="636.22" ytl="565.18" xbr="902.16" ybr="715.71" z_order="0">
+    </box>
+  </image>
+  <image id="68" name="image1239.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="645.29,563.70;895.88,568.05;890.08,714.98;637.16,708.59" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="635.38" ytl="563.09" xbr="898.81" ybr="718.22" z_order="0">
+    </box>
+  </image>
+  <image id="69" name="image1241.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="648.14,558.70;899.02,562.19;894.37,708.54;640.01,701.86" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="637.47" ytl="558.49" xbr="902.99" ybr="712.78" z_order="0">
+    </box>
+  </image>
+  <image id="71" name="image1243.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="632.87" ytl="545.53" xbr="898.39" ybr="700.65" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="644.65,547.38;894.66,550.57;886.53,697.21;635.36,689.37" z_order="0">
+    </points>
+  </image>
+  <image id="75" name="image1249.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="632.82,490.45;890.32,487.23;874.39,634.43;622.93,637.45" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="620.33" ytl="485.31" xbr="892.96" ybr="639.61" z_order="0">
+    </box>
+  </image>
+  <image id="78" name="image1256.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="601.51" ytl="444.75" xbr="869.12" ybr="601.14" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="612.77,446.68;863.36,451.03;854.07,596.51;604.64,596.51" z_order="0">
+    </points>
+  </image>
+  <image id="80" name="image1260.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="610.59,440.00;861.77,433.95;852.09,588.57;601.16,584.94" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="599.84" ytl="433.88" xbr="864.94" ybr="590.68" z_order="0">
+    </box>
+  </image>
+  <image id="81" name="image1261.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="603.19,442.32;856.10,435.93;844.78,588.09;594.48,587.22" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="591.48" ytl="433.88" xbr="858.67" ybr="591.52" z_order="0">
+    </box>
+  </image>
+  <image id="84" name="image1266.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="607.25,478.04;849.42,478.04;848.26,624.39;598.25,620.61" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="595.66" ytl="473.19" xbr="856.16" ybr="627.48" z_order="0">
+    </box>
+  </image>
+  <image id="86" name="image1268.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="606.27,487.45;851.92,485.70;839.38,634.84;596.51,628.92" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="594.41" ytl="483.22" xbr="856.16" ybr="637.10" z_order="0">
+    </box>
+  </image>
+  <image id="87" name="image1270.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="586.46" ytl="488.24" xbr="852.40" ybr="640.02" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="601.39,491.28;848.79,490.58;833.11,636.58;588.84,633.79" z_order="0">
+    </points>
+  </image>
+  <image id="88" name="image1272.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="599.95,497.59;843.62,496.86;826.92,643.50;585.91,638.90" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="586.46" ytl="495.35" xbr="846.54" ybr="647.55" z_order="0">
+    </box>
+  </image>
+  <image id="89" name="image1273.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="576.84" ytl="497.02" xbr="841.53" ybr="647.55" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="591.90,498.90;840.13,498.94;824.45,644.13;578.51,641.52" z_order="0">
+    </points>
+  </image>
+  <image id="90" name="image1275.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="583.98,503.88;829.10,506.54;813.61,654.88;571.63,645.92" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="570.15" ytl="502.46" xbr="828.56" ybr="657.59" z_order="0">
+    </box>
+  </image>
+  <image id="91" name="image1277.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="557.19" ytl="499.11" xbr="820.62" ybr="654.66" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="575.60,501.85;816.61,502.14;801.80,651.39;560.50,642.97" z_order="0">
+    </points>
+  </image>
+  <image id="95" name="image1285.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="509.52" ytl="492.42" xbr="772.95" ybr="649.22" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="525.90,495.40;770.40,502.00;748.60,645.90;512.30,632.30" z_order="0">
+    </points>
+  </image>
+  <image id="96" name="image1287.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="520.14,505.04;756.21,511.14;735.60,658.65;500.98,647.91" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="499.91" ytl="502.88" xbr="758.32" ybr="662.19" z_order="0">
+    </box>
+  </image>
+  <image id="97" name="image1289.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="509.11,518.40;744.31,525.08;728.34,670.55;495.46,658.94" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="491.54" ytl="517.51" xbr="747.86" ybr="673.06" z_order="0">
+    </box>
+  </image>
+  <image id="98" name="image1290.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="490.29" ytl="520.44" xbr="743.68" ybr="679.33" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="506.45,523.25;739.52,529.47;723.05,675.33;492.50,662.05" z_order="0">
+    </points>
+  </image>
+  <image id="99" name="image1291.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="498.94,530.65;733.10,538.67;720.21,681.53;486.30,668.00" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="484.44" ytl="528.80" xbr="739.92" ybr="684.77" z_order="0">
+    </box>
+  </image>
+  <image id="100" name="image1292.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="499.93,534.81;732.23,540.66;715.69,685.24;487.43,671.73" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="484.02" ytl="531.73" xbr="736.57" ybr="689.78" z_order="0">
+    </box>
+  </image>
+  <image id="101" name="image1294.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="496.62,543.81;725.53,548.65;710.53,695.53;480.89,681.49" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="479.00" ytl="540.93" xbr="731.56" ybr="698.98" z_order="0">
+    </box>
+  </image>
+  <image id="102" name="image1296.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="471.47" ytl="550.96" xbr="723.61" ybr="707.35" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="491.66,553.57;719.32,556.59;702.99,704.60;474.12,690.28" z_order="0">
+    </points>
+  </image>
+  <image id="104" name="image1299.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="480.77,569.09;707.63,572.93;691.29,718.52;464.04,704.40" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="461.86" ytl="564.76" xbr="710.65" ybr="722.82" z_order="0">
+    </box>
+  </image>
+  <image id="105" name="image1301.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="455.58" ytl="576.47" xbr="703.96" ybr="730.34" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="475.57,578.41;699.40,583.98;681.98,727.23;457.91,715.61" z_order="0">
+    </points>
+  </image>
+  <image id="107" name="image1306.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="432.17" ytl="586.50" xbr="675.11" ybr="743.72" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="450.60,590.40;670.85,595.59;656.57,740.54;434.10,721.60" z_order="0">
+    </points>
+  </image>
+  <image id="108" name="image1308.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="442.30,588.60;664.47,595.51;648.14,742.31;428.34,724.77" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="425.48" ytl="584.83" xbr="668.00" ybr="746.65" z_order="0">
+    </box>
+  </image>
+  <image id="109" name="image1309.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="424.22" ytl="585.25" xbr="666.33" ybr="742.47" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="439.76,586.88;662.86,593.90;647.86,740.29;426.45,721.18" z_order="0">
+    </points>
+  </image>
+  <image id="110" name="image1311.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="443.87,589.54;663.59,595.59;647.40,740.00;428.38,723.35" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="426.31" ytl="588.18" xbr="666.33" ybr="743.72" z_order="0">
+    </box>
+  </image>
+  <image id="111" name="image1313.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="454.52,594.19;670.85,598.83;655.17,742.86;436.80,726.31" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="436.35" ytl="591.52" xbr="675.11" ybr="745.81" z_order="0">
+    </box>
+  </image>
+  <image id="112" name="image1314.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="437.60" ytl="590.27" xbr="679.29" ybr="747.90" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="455.10,593.03;675.78,598.54;659.52,744.31;441.16,726.60" z_order="0">
+    </points>
+  </image>
+  <image id="115" name="image1318.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="454.75" ytl="586.50" xbr="688.49" ybr="738.29" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="469.33,587.86;686.23,591.34;672.30,734.79;456.55,720.27" z_order="0">
+    </points>
+  </image>
+  <image id="119" name="image1325.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="482.68,561.72;696.11,562.01;680.14,702.26;469.33,696.75" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="466.04" ytl="557.23" xbr="700.19" ybr="707.35" z_order="0">
+    </box>
+  </image>
+  <image id="120" name="image1328.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="479.78,555.33;691.46,551.27;681.88,697.33;473.39,687.74" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="468.96" ytl="548.03" xbr="694.76" ybr="699.40" z_order="0">
+    </box>
+  </image>
+  <image id="121" name="image1330.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="475.42,553.01;685.94,545.75;675.78,693.26;466.13,687.74" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="462.69" ytl="543.44" xbr="689.74" ybr="693.96" z_order="0">
+    </box>
+  </image>
+  <image id="122" name="image1332.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="463.95" ytl="538.00" xbr="687.23" ybr="688.53" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="471.50,547.62;684.07,540.22;672.64,686.25;465.61,683.90" z_order="0">
+    </points>
+  </image>
+  <image id="123" name="image1333.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="467.83,546.23;678.11,536.79;668.67,681.98;462.26,681.73" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="460.60" ytl="534.65" xbr="682.63" ybr="685.18" z_order="0">
+    </box>
+  </image>
+  <image id="124" name="image1335.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="464.68,540.18;673.75,530.89;665.33,678.10;456.55,675.49" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="455.17" ytl="528.80" xbr="678.03" ybr="679.33" z_order="0">
+    </box>
+  </image>
+  <image id="125" name="image1337.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="442.20" ytl="522.11" xbr="664.65" ybr="675.57" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="453.24,535.10;661.15,525.22;652.44,671.28;446.56,670.41" z_order="0">
+    </points>
+  </image>
+  <image id="128" name="image1340.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="444.60,530.74;650.76,520.82;641.57,666.25;435.64,669.39" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="433.84" ytl="517.93" xbr="655.45" ybr="671.80" z_order="0">
+    </box>
+  </image>
+  <image id="129" name="image1342.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="427.22,534.95;633.39,523.34;625.84,667.94;424.32,670.85" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="421.30" ytl="521.27" xbr="636.64" ybr="673.48" z_order="0">
+    </box>
+  </image>
+  <image id="130" name="image1344.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="407.50" ytl="520.86" xbr="624.09" ybr="675.57" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="412.68,538.38;619.20,521.74;611.31,670.46;409.15,673.31" z_order="0">
+    </points>
+  </image>
+  <image id="131" name="image1345.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="399.97" ytl="522.11" xbr="616.57" ybr="679.75" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="407.78,540.66;612.25,525.54;603.58,671.93;403.34,675.77" z_order="0">
+    </points>
+  </image>
+  <image id="132" name="image1347.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="392.03" ytl="527.96" xbr="610.71" ybr="685.18" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="400.80,546.01;604.64,530.04;596.51,678.13;394.70,681.91" z_order="0">
+    </points>
+  </image>
+  <image id="133" name="image1349.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="405.15,553.77;606.80,540.06;600.95,683.83;401.52,688.27" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="397.88" ytl="536.33" xbr="614.48" ybr="691.87" z_order="0">
+    </box>
+  </image>
+  <image id="134" name="image1352.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="413.23,572.47;610.45,558.88;603.48,699.65;405.91,706.62" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="403.32" ytl="552.22" xbr="616.15" ybr="708.60" z_order="0">
+    </box>
+  </image>
+  <image id="135" name="image1354.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="406.24" ytl="563.92" xbr="617.00" ybr="719.89" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="416.25,582.00;612.05,568.69;605.59,709.84;408.18,717.51" z_order="0">
+    </points>
+  </image>
+  <image id="136" name="image1356.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="413.35" ytl="575.21" xbr="624.51" ybr="729.51" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="424.80,593.90;621.00,577.00;611.32,719.73;416.04,726.26" z_order="0">
+    </points>
+  </image>
+  <image id="137" name="image1357.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="413.35" ytl="579.81" xbr="620.75" ybr="728.67" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="423.30,598.49;616.16,583.73;611.80,722.39;415.32,732.07" z_order="0">
+    </points>
+  </image>
+  <image id="138" name="image1359.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="420.88" ytl="596.54" xbr="630.37" ybr="750.83" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="431.77,615.19;622.93,600.43;616.40,740.78;423.06,748.52" z_order="0">
+    </points>
+  </image>
+  <image id="139" name="image1361.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="435.89,633.34;625.84,617.13;621.00,763.77;430.32,766.91" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="427.57" ytl="611.59" xbr="634.97" ybr="770.48" z_order="0">
+    </box>
+  </image>
+  <image id="141" name="image1363.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="434.34" ytl="630.03" xbr="640.90" ybr="786.83" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="444.68,649.35;632.21,633.22;630.80,780.42;438.22,784.05" z_order="0">
+    </points>
+  </image>
+  <image id="142" name="image1364.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="449.72,655.60;634.43,641.89;632.61,782.84;441.25,788.08" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="438.44" ytl="638.35" xbr="642.91" ybr="790.55" z_order="0">
+    </box>
+  </image>
+  <image id="143" name="image1366.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="446.80" ytl="651.73" xbr="649.18" ybr="805.19" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="455.91,670.29;639.14,656.94;637.68,796.03;448.36,803.28" z_order="0">
+    </points>
+  </image>
+  <image id="144" name="image1368.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="453.49" ytl="660.93" xbr="656.71" ybr="818.57" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="463.03,680.40;651.77,664.68;645.72,809.66;454.96,814.90" z_order="0">
+    </points>
+  </image>
+  <image id="145" name="image1369.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="466.60,686.50;656.84,671.30;651.13,815.47;458.89,822.87" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="457.67" ytl="668.88" xbr="662.60" ybr="824.42" z_order="0">
+    </box>
+  </image>
+  <image id="146" name="image1371.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="467.29" ytl="678.91" xbr="670.09" ybr="836.13" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="476.03,698.69;663.73,682.05;658.19,824.72;468.30,833.62" z_order="0">
+    </points>
+  </image>
+  <image id="147" name="image1373.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="485.61,713.31;672.30,697.17;665.75,841.18;475.80,848.00" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="474.40" ytl="693.96" xbr="678.45" ybr="849.93" z_order="0">
+    </box>
+  </image>
+  <image id="148" name="image1376.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="486.94" ytl="712.36" xbr="686.40" ybr="864.15" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="498.16,731.46;682.30,715.49;674.80,859.00;490.18,863.23" z_order="0">
+    </points>
+  </image>
+  <image id="149" name="image1378.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="502.14,740.24;686.23,723.11;679.27,870.62;491.39,875.56" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="489.45" ytl="722.40" xbr="693.92" ybr="877.53" z_order="0">
+    </box>
+  </image>
+  <image id="150" name="image1380.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="505.61,748.93;688.94,730.11;681.21,877.48;494.52,884.03" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="493.22" ytl="727.00" xbr="694.76" ybr="886.73" z_order="0">
+    </box>
+  </image>
+  <image id="151" name="image1381.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="494.89" ytl="732.85" xbr="697.69" ybr="890.07" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="507.62,751.62;689.95,734.14;684.40,882.02;496.37,888.07" z_order="0">
+    </points>
+  </image>
+  <image id="152" name="image1383.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="498.32" ytl="738.33" xbr="701.11" ybr="896.80" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="510.31,762.21;693.48,740.70;685.92,887.90;500.40,892.94" z_order="0">
+    </points>
+  </image>
+  <image id="153" name="image1385.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="502.83" ytl="739.12" xbr="706.05" ybr="902.20" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="517.07,762.47;699.96,743.32;694.12,892.94;505.17,900.00" z_order="0">
+    </points>
+  </image>
+  <image id="154" name="image1388.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="522.03,771.02;705.45,753.36;698.92,901.69;513.08,909.92" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="509.94" ytl="750.00" xbr="711.90" ybr="912.65" z_order="0">
+    </box>
+  </image>
+  <image id="155" name="image1390.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="528.36,778.61;710.25,760.06;702.99,908.47;516.87,917.74" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="514.96" ytl="756.27" xbr="712.32" ybr="921.01" z_order="0">
+    </box>
+  </image>
+  <image id="156" name="image1392.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="528.40,785.70;713.10,761.60;702.20,917.50;517.20,924.90" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="515.38" ytl="759.61" xbr="717.76" ybr="926.87" z_order="0">
+    </box>
+  </image>
+  <image id="157" name="image1393.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="516.63" ytl="766.72" xbr="714.41" ybr="931.88" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="526.80,791.50;710.30,769.00;702.50,919.30;520.00,929.40" z_order="0">
+    </points>
+  </image>
+  <image id="158" name="image1395.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="507.02" ytl="772.99" xbr="705.63" ybr="940.25" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="520.60,797.90;700.75,776.50;692.83,931.01;508.51,937.06" z_order="0">
+    </points>
+  </image>
+  <image id="159" name="image1397.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="512.89,801.47;695.70,777.30;682.41,932.45;502.35,941.43" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="500.41" ytl="776.38" xbr="700.70" ybr="942.80" z_order="0">
+    </box>
+  </image>
+  <image id="160" name="image1398.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="496.56" ytl="778.85" xbr="693.92" ybr="942.76" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="508.08,803.88;688.32,781.08;679.08,932.52;496.44,941.16" z_order="0">
+    </points>
+  </image>
+  <image id="161" name="image1399.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="506.15,805.09;683.10,784.36;673.08,934.52;494.40,942.82" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="493.22" ytl="780.10" xbr="688.91" ybr="945.27" z_order="0">
+    </box>
+  </image>
+  <image id="162" name="image1400.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="503.18,808.61;681.02,786.00;672.67,937.20;492.38,946.99" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="489.87" ytl="782.61" xbr="685.56" ybr="948.61" z_order="0">
+    </box>
+  </image>
+  <image id="163" name="image1402.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="476.49" ytl="785.54" xbr="675.11" ybr="952.79" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="493.02,810.28;670.31,788.33;660.29,942.12;478.68,950.25" z_order="0">
+    </points>
+  </image>
+  <image id="164" name="image1404.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="471.06" ytl="791.39" xbr="668.42" ybr="958.65" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="485.86,817.43;660.67,794.42;653.00,947.45;472.59,955.53" z_order="0">
+    </points>
+  </image>
+  <image id="165" name="image1405.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="481.51,820.75;654.66,795.66;646.57,950.14;468.03,958.64" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="466.04" ytl="794.32" xbr="661.31" ybr="960.74" z_order="0">
+    </box>
+  </image>
+  <image id="166" name="image1407.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="456.00" ytl="797.66" xbr="650.02" ybr="964.50" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="473.63,825.31;645.32,801.05;635.37,952.63;457.66,961.55" z_order="0">
+    </points>
+  </image>
+  <image id="167" name="image1409.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="444.29" ytl="799.75" xbr="637.47" ybr="968.26" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="461.40,828.01;633.50,802.30;623.34,956.57;446.70,966.10" z_order="0">
+    </points>
+  </image>
+  <image id="168" name="image1412.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="426.31" ytl="799.75" xbr="622.42" ybr="968.68" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="442.29,828.55;614.70,804.60;604.96,959.70;428.31,967.22" z_order="0">
+    </points>
+  </image>
+  <image id="169" name="image1414.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="425.28,826.61;596.93,802.27;589.58,958.08;413.47,964.99" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="411.68" ytl="798.08" xbr="603.19" ybr="967.01" z_order="0">
+    </box>
+  </image>
+  <image id="170" name="image1416.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="402.06" ytl="793.90" xbr="591.90" ybr="964.50" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="417.68,821.99;587.29,797.80;578.33,954.27;403.95,962.33" z_order="0">
+    </points>
+  </image>
+  <image id="171" name="image1417.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="391.61" ytl="791.39" xbr="586.04" ybr="962.83" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="406.80,820.30;577.64,795.20;567.19,951.97;394.01,960.03" z_order="0">
+    </points>
+  </image>
+  <image id="172" name="image1419.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="395.80,816.10;563.61,787.74;554.08,945.73;382.60,955.07" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="381.16" ytl="786.37" xbr="571.41" ybr="957.39" z_order="0">
+    </box>
+  </image>
+  <image id="173" name="image1421.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="367.78" ytl="776.34" xbr="556.36" ybr="951.12" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="378.80,804.58;549.52,779.87;540.88,935.90;369.64,947.83" z_order="0">
+    </points>
+  </image>
+  <image id="174" name="image1422.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="373.73,800.83;542.50,774.34;533.57,935.04;362.21,945.26" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="359.50" ytl="770.94" xbr="552.68" ybr="947.06" z_order="0">
+    </box>
+  </image>
+  <image id="175" name="image1423.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="367.46,796.90;534.18,769.12;526.92,928.78;355.23,939.36" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="353.83" ytl="765.22" xbr="544.50" ybr="943.35" z_order="0">
+    </box>
+  </image>
+  <image id="176" name="image1424.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="362.35,791.04;527.95,763.25;519.74,923.81;348.82,935.62" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="347.80" ytl="761.21" xbr="537.47" ybr="938.83" z_order="0">
+    </box>
+  </image>
+  <image id="177" name="image1426.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="334.26" ytl="748.66" xbr="521.92" ybr="929.30" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="349.21,783.43;513.86,754.40;505.77,912.61;336.56,926.92" z_order="0">
+    </points>
+  </image>
+  <image id="178" name="image1428.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="335.57,774.01;500.29,743.65;493.33,902.90;323.87,917.59" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="321.21" ytl="740.60" xbr="509.37" ybr="919.77" z_order="0">
+    </box>
+  </image>
+  <image id="179" name="image1429.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="314.69" ytl="732.61" xbr="499.84" ybr="913.75" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="327.11,767.79;491.34,737.93;486.61,896.93;317.90,911.86" z_order="0">
+    </points>
+  </image>
+  <image id="180" name="image1431.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="351.18" ytl="87.53" xbr="879.76" ybr="1054.09" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="384.24,657.71;788.85,109.05;818.95,689.96;362.74,1044.69" z_order="0">
+    </points>
+  </image>
+  <image id="181" name="image1432.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="342.55" ytl="104.79" xbr="877.61" ybr="1060.56" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="353.24,1050.96;378.37,655.81;789.69,107.64;819.55,690.15" z_order="0">
+    </points>
+  </image>
+  <image id="182" name="image1433.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="344.83,1047.43;369.01,654.77;785.26,113.71;816.61,690.60" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="336.07" ytl="100.48" xbr="868.98" ybr="1054.09" z_order="0">
+    </box>
+  </image>
+  <image id="183" name="image1435.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="356.17,647.31;784.66,115.80;816.31,688.51;332.88,1032.80" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="325.29" ytl="111.26" xbr="860.35" ybr="1045.46" z_order="0">
+    </box>
+  </image>
+  <image id="184" name="image1437.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="344.65,640.97;787.37,113.86;819.09,686.38;323.50,1020.85" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="316.66" ytl="113.42" xbr="862.50" ybr="1023.88" z_order="0">
+    </box>
+  </image>
+  <image id="185" name="image1439.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="308.03" ytl="109.11" xbr="877.61" ybr="1026.04" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="337.36,634.47;794.52,115.50;825.87,684.03;316.16,1016.37" z_order="0">
+    </points>
+  </image>
+  <image id="186" name="image1440.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="335.65,632.34;799.60,118.94;832.28,684.80;306.41,1024.48" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="299.40" ytl="113.42" xbr="877.61" ybr="1036.83" z_order="0">
+    </box>
+  </image>
+  <image id="187" name="image1441.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="329.00,630.88;803.47,119.38;835.12,687.32;301.23,1025.03" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="297.24" ytl="113.42" xbr="877.61" ybr="1021.73" z_order="0">
+    </box>
+  </image>
+  <image id="188" name="image1443.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="320.60,627.61;811.64,124.53;843.46,692.54;293.51,1020.18" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="275.66" ytl="117.73" xbr="884.08" ybr="1038.99" z_order="0">
+    </box>
+  </image>
+  <image id="189" name="image1444.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="282.14" ytl="122.05" xbr="886.24" ybr="1023.88" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="316.52,628.25;815.30,130.55;846.47,696.69;285.34,1022.76" z_order="0">
+    </points>
+  </image>
+  <image id="190" name="image1445.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="310.28,627.18;815.51,134.42;846.47,700.71;277.17,1020.61" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="271.35" ytl="126.36" xbr="888.39" ybr="1028.20" z_order="0">
+    </box>
+  </image>
+  <image id="191" name="image1446.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="302.16,627.46;815.95,140.74;849.36,703.78;266.88,1018.85" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="258.40" ytl="137.15" xbr="892.71" ybr="1021.73" z_order="0">
+    </box>
+  </image>
+  <image id="192" name="image1447.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="254.09" ytl="139.31" xbr="892.71" ybr="1023.88" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="296.45,624.31;817.45,142.73;850.77,704.58;258.47,1023.12" z_order="0">
+    </points>
+  </image>
+  <image id="193" name="image1448.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="287.79,622.22;818.70,146.86;850.95,708.22;256.50,1016.00" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="251.93" ytl="143.62" xbr="894.87" ybr="1002.31" z_order="0">
+    </box>
+  </image>
+  <image id="194" name="image1449.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="280.65,620.89;819.26,148.80;852.79,711.44;246.43,1016.95" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="228.20" ytl="141.47" xbr="897.02" ybr="1021.73" z_order="0">
+    </box>
+  </image>
+  <image id="195" name="image1450.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="221.73" ytl="152.25" xbr="894.87" ybr="1023.88" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="272.70,617.95;819.61,150.53;849.68,709.54;240.90,1013.84" z_order="0">
+    </points>
+  </image>
+  <image id="196" name="image1451.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="221.73" ytl="150.10" xbr="897.02" ybr="1010.94" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="264.82,614.22;820.54,150.15;851.02,708.15;231.23,1009.24" z_order="0">
+    </points>
+  </image>
+  <image id="197" name="image1452.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="258.18,610.18;823.58,150.18;855.72,709.36;228.20,1008.10" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="221.73" ytl="150.10" xbr="894.87" ybr="1013.10" z_order="0">
+    </box>
+  </image>
+  <image id="198" name="image1453.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="250.58,605.86;823.93,150.18;857.11,710.57;210.49,1006.23" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="200.15" ytl="145.78" xbr="897.02" ybr="1019.57" z_order="0">
+    </box>
+  </image>
+  <image id="199" name="image1454.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="191.52" ytl="150.10" xbr="894.87" ybr="1015.25" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="243.70,599.81;825.60,149.23;857.28,707.66;203.95,1004.74" z_order="0">
+    </points>
+  </image>
+  <image id="200" name="image1455.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="237.63,593.56;826.76,151.33;861.10,707.32;205.70,984.90" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="189.36" ytl="147.94" xbr="894.87" ybr="1002.31" z_order="0">
+    </box>
+  </image>
+  <image id="201" name="image1457.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="187.21" ytl="150.10" xbr="903.50" ybr="982.89" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="225.98,587.29;832.74,152.53;868.57,708.82;195.00,980.30" z_order="0">
+    </points>
+  </image>
+  <image id="202" name="image1459.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="159.16" ytl="147.94" xbr="907.81" ybr="987.21" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="211.90,573.20;840.45,147.45;873.79,707.82;169.10,982.78" z_order="0">
+    </points>
+  </image>
+  <image id="203" name="image1461.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="201.20,568.18;846.47,155.51;883.50,710.01;158.20,977.26" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="150.53" ytl="152.25" xbr="916.44" ybr="985.05" z_order="0">
+    </box>
+  </image>
+  <image id="204" name="image1462.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="195.83,562.80;850.65,155.81;889.47,713.00;151.04,974.27" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="137.58" ytl="156.57" xbr="920.76" ybr="985.05" z_order="0">
+    </box>
+  </image>
+  <image id="205" name="image1463.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="135.43" ytl="156.57" xbr="929.39" ybr="993.68" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="191.52,560.96;856.10,157.98;891.19,715.24;146.63,974.78" z_order="0">
+    </points>
+  </image>
+  <image id="206" name="image1465.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="131.11" ytl="167.36" xbr="938.02" ybr="976.42" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="183.01,553.65;864.96,166.67;904.09,721.78;135.71,971.59" z_order="0">
+    </points>
+  </image>
+  <image id="207" name="image1467.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="124.64" ytl="173.83" xbr="940.17" ybr="976.42" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="176.12,545.19;874.24,170.44;913.06,726.73;128.64,967.11" z_order="0">
+    </points>
+  </image>
+  <image id="208" name="image1469.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="116.01" ytl="180.30" xbr="948.80" ybr="961.32" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="171.09,538.12;882.25,180.30;922.31,727.48;123.81,955.41" z_order="0">
+    </points>
+  </image>
+  <image id="209" name="image1471.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="162.08,529.06;884.09,186.27;925.30,729.72;116.10,949.49" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="107.38" ytl="182.46" xbr="955.28" ybr="963.47" z_order="0">
+    </box>
+  </image>
+  <image id="210" name="image1473.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="100.91" ytl="193.25" xbr="955.28" ybr="950.53" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="146.63,522.78;884.48,202.36;927.31,733.82;104.84,941.24" z_order="0">
+    </points>
+  </image>
+  <image id="211" name="image1475.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="132.91,515.56;877.77,214.02;922.97,740.32;93.28,935.36" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="85.80" ytl="208.35" xbr="950.96" ybr="946.21" z_order="0">
+    </box>
+  </image>
+  <image id="212" name="image1477.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="75.02" ytl="225.61" xbr="940.17" ybr="950.53" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="124.45,516.07;877.26,227.64;920.60,751.36;84.20,940.21" z_order="0">
+    </points>
+  </image>
+  <image id="213" name="image1479.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="70.70" ytl="242.87" xbr="948.80" ybr="959.16" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="123.56,515.03;879.62,240.91;925.90,761.97;81.46,941.13" z_order="0">
+    </points>
+  </image>
+  <image id="214" name="image1481.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="66.39" ytl="245.03" xbr="940.17" ybr="950.53" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="111.20,517.53;876.14,253.10;921.29,769.50;70.35,940.64" z_order="0">
+    </points>
+  </image>
+  <image id="215" name="image1483.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="103.81,513.08;874.68,271.60;923.59,781.18;64.80,940.93" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="59.91" ytl="262.29" xbr="942.33" ybr="952.69" z_order="0">
+    </box>
+  </image>
+  <image id="216" name="image1485.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="64.23" ytl="273.07" xbr="942.33" ybr="935.43" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="104.75,505.92;876.57,273.73;928.60,781.11;69.06,932.90" z_order="0">
+    </points>
+  </image>
+  <image id="217" name="image1487.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="75.02" ytl="273.07" xbr="959.59" ybr="933.27" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="113.09,499.56;891.19,275.63;942.27,777.16;81.62,927.31" z_order="0">
+    </points>
+  </image>
+  <image id="218" name="image1489.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="123.03,494.96;908.10,276.39;963.64,772.66;92.21,919.93" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="81.49" ytl="270.92" xbr="979.01" ybr="931.11" z_order="0">
+    </box>
+  </image>
+  <image id="219" name="image1491.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="98.75" ytl="268.76" xbr="991.95" ybr="918.17" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="136.83,486.15;918.54,274.60;976.84,766.84;104.84,911.83" z_order="0">
+    </points>
+  </image>
+  <image id="220" name="image1492.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="100.91" ytl="268.76" xbr="1000.58" ybr="916.01" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="134.27,483.48;929.29,272.47;988.73,763.60;107.52,904.77" z_order="0">
+    </points>
+  </image>
+  <image id="221" name="image1493.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="100.91" ytl="266.60" xbr="1009.21" ybr="920.32" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="145.56,479.03;932.86,270.39;992.59,764.34;117.03,902.54" z_order="0">
+    </points>
+  </image>
+  <image id="222" name="image1494.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="150.76,475.40;939.78,272.44;996.10,765.63;123.67,899.79" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="113.85" ytl="268.76" xbr="1009.21" ybr="907.38" z_order="0">
+    </box>
+  </image>
+  <image id="223" name="image1495.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="152.77,473.46;949.31,276.39;1005.92,764.06;127.33,901.29" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="118.17" ytl="273.07" xbr="1017.84" ybr="909.54" z_order="0">
+    </box>
+  </image>
+  <image id="224" name="image1496.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="118.17" ytl="277.39" xbr="1032.95" ybr="911.69" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="154.92,472.18;954.16,278.83;1017.87,766.54;128.54,898.18" z_order="0">
+    </points>
+  </image>
+  <image id="225" name="image1497.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="162.80,470.67;955.69,279.75;1018.03,766.92;139.58,897.64" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="135.43" ytl="273.07" xbr="1030.79" ybr="909.54" z_order="0">
+    </box>
+  </image>
+  <image id="226" name="image1498.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="170.97,473.25;965.15,282.76;1026.63,772.08;150.33,896.78" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="139.74" ytl="268.76" xbr="1037.26" ybr="905.22" z_order="0">
+    </box>
+  </image>
+  <image id="227" name="image1499.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="144.06" ytl="281.70" xbr="1043.73" ybr="903.06" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="176.77,470.11;973.87,288.22;1038.07,772.37;155.37,896.30" z_order="0">
+    </points>
+  </image>
+  <image id="228" name="image1500.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="152.69" ytl="281.70" xbr="1045.89" ybr="900.91" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="183.27,468.60;980.45,287.50;1042.37,772.00;162.63,893.77" z_order="0">
+    </points>
+  </image>
+  <image id="229" name="image1501.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="187.76,468.45;988.90,290.48;1049.22,771.82;170.44,893.65" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="161.32" ytl="288.18" xbr="1060.99" ybr="905.22" z_order="0">
+    </box>
+  </image>
+  <image id="230" name="image1502.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="163.47" ytl="294.65" xbr="1058.84" ybr="887.96" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="198.88,462.08;992.77,294.11;1052.69,773.43;176.41,890.06" z_order="0">
+    </points>
+  </image>
+  <image id="231" name="image1503.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="199.78,461.07;996.04,297.61;1058.57,774.37;181.82,889.54" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="172.10" ytl="294.65" xbr="1069.62" ybr="900.91" z_order="0">
+    </box>
+  </image>
+  <image id="232" name="image1505.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="207.83,456.74;1001.61,301.94;1064.76,771.28;191.73,879.01" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="187.21" ytl="294.65" xbr="1073.94" ybr="892.28" z_order="0">
+    </box>
+  </image>
+  <image id="233" name="image1507.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="182.89" ytl="303.28" xbr="1080.00" ybr="896.59" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="216.81,446.42;1009.35,306.07;1073.33,767.35;204.42,872.61" z_order="0">
+    </points>
+  </image>
+  <image id="234" name="image1508.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="193.68" ytl="301.12" xbr="1080.00" ybr="875.02" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="220.46,446.33;1009.53,305.16;1074.92,768.06;205.60,869.85" z_order="0">
+    </points>
+  </image>
+  <image id="235" name="image1509.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="222.69,443.73;1015.85,306.28;1077.77,766.32;214.02,866.01" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="202.31" ytl="305.44" xbr="1080.00" ybr="875.02" z_order="0">
+    </box>
+  </image>
+  <image id="236" name="image1511.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="226.87,441.43;1018.03,314.58;1078.66,770.79;217.84,864.10" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="208.78" ytl="307.59" xbr="1080.00" ybr="875.02" z_order="0">
+    </box>
+  </image>
+  <image id="237" name="image1513.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="230.27,441.58;1021.13,325.67;1079.08,775.93;223.13,862.42" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="215.25" ytl="314.07" xbr="1080.00" ybr="866.39" z_order="0">
+    </box>
+  </image>
+  <image id="238" name="image1515.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="226.40,437.54;1013.37,329.19;1075.29,779.33;222.07,860.44" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="210.94" ytl="322.70" xbr="1080.00" ybr="866.39" z_order="0">
+    </box>
+  </image>
+  <image id="239" name="image1517.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="215.25" ytl="331.33" xbr="1078.25" ybr="864.23" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="224.79,434.41;1008.31,337.96;1070.12,783.17;218.82,857.82" z_order="0">
+    </points>
+  </image>
+  <image id="240" name="image1519.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="206.62" ytl="329.17" xbr="1080.00" ybr="866.39" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="220.21,428.25;1004.09,336.62;1062.29,783.04;218.97,851.15" z_order="0">
+    </points>
+  </image>
+  <image id="241" name="image1520.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="218.35,424.75;995.42,342.19;1058.88,781.29;215.26,848.88" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="204.47" ytl="333.48" xbr="1067.47" ybr="853.44" z_order="0">
+    </box>
+  </image>
+  <image id="242" name="image1521.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="197.99" ytl="331.33" xbr="1060.99" ybr="846.97" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="212.68,422.08;999.97,340.81;1059.74,777.24;209.67,844.75" z_order="0">
+    </points>
+  </image>
+  <image id="243" name="image1523.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="208.03,409.27;983.55,341.16;1044.95,775.09;210.10,835.46" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="197.99" ytl="333.48" xbr="1052.36" ybr="846.97" z_order="0">
+    </box>
+  </image>
+  <image id="244" name="image1525.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="203.39,402.56;977.36,343.22;1036.18,770.97;203.91,823.60" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="195.84" ytl="333.48" xbr="1043.73" ybr="834.02" z_order="0">
+    </box>
+  </image>
+  <image id="245" name="image1527.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="194.62,386.56;965.49,334.97;1023.28,766.84;199.26,812.24" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="189.36" ytl="331.33" xbr="1037.26" ybr="823.24" z_order="0">
+    </box>
+  </image>
+  <image id="246" name="image1529.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="191.11,381.82;958.89,344.05;1014.61,765.08;192.35,810.90" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="176.42" ytl="335.64" xbr="1030.79" ybr="823.24" z_order="0">
+    </box>
+  </image>
+  <image id="247" name="image1531.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="181.82,381.20;947.74,347.76;1006.56,766.32;183.68,804.71" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="174.26" ytl="348.59" xbr="1009.21" ybr="816.76" z_order="0">
+    </box>
+  </image>
+  <image id="248" name="image1533.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="177.49,377.48;935.98,359.53;995.42,774.99;181.20,807.81" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="169.95" ytl="352.90" xbr="1000.58" ybr="818.92" z_order="0">
+    </box>
+  </image>
+  <image id="249" name="image1535.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="159.16" ytl="363.69" xbr="991.95" ybr="818.92" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="168.26,377.73;921.80,366.58;974.43,780.81;175.14,808.55" z_order="0">
+    </points>
+  </image>
+  <image id="250" name="image1537.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="146.21" ytl="363.69" xbr="966.06" ybr="823.24" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="155.92,376.07;903.23,378.22;958.70,787.56;164.09,812.07" z_order="0">
+    </points>
+  </image>
+  <image id="251" name="image1538.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="150.76,380.80;895.49,381.66;947.52,787.56;156.78,809.49" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="141.90" ytl="363.69" xbr="957.43" ybr="821.08" z_order="0">
+    </box>
+  </image>
+  <image id="252" name="image1539.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="128.95" ytl="365.85" xbr="957.43" ybr="818.92" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="143.45,378.65;885.17,388.97;939.78,788.85;151.19,805.62" z_order="0">
+    </points>
+  </image>
+  <image id="253" name="image1540.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="126.80" ytl="361.53" xbr="938.02" ybr="821.08" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="134.42,374.35;872.70,388.11;926.45,790.14;141.73,803.47" z_order="0">
+    </points>
+  </image>
+  <image id="258" name="image1545.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="84.97,350.70;822.82,399.29;874.42,781.97;96.15,778.96" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="72.86" ytl="335.64" xbr="886.24" ybr="795.19" z_order="0">
+    </box>
+  </image>
+  <image id="259" name="image1546.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="68.54" ytl="335.64" xbr="856.03" ybr="797.35" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="78.52,350.27;799.60,395.85;844.32,781.97;84.54,779.82" z_order="0">
+    </points>
+  </image>
+  <image id="260" name="image1547.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="59.95,345.29;787.48,399.46;834.43,782.32;66.66,775.09" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="49.13" ytl="339.96" xbr="843.09" ybr="797.35" z_order="0">
+    </box>
+  </image>
+  <image id="261" name="image1548.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="46.51" ytl="329.68" xbr="842.09" ybr="804.63" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="54.44,338.23;784.98,408.32;833.57,786.70;66.90,776.80" z_order="0">
+    </points>
+  </image>
+  <image id="262" name="image1549.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="41.12" ytl="332.38" xbr="820.22" ybr="799.84" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="49.57,339.81;764.42,407.89;809.92,790.21;57.81,774.09" z_order="0">
+    </points>
+  </image>
+  <image id="263" name="image1550.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="39.18,333.36;750.44,409.68;795.95,791.29;46.70,773.01" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="30.63" ytl="326.39" xbr="803.73" ybr="801.34" z_order="0">
+    </box>
+  </image>
+  <image id="264" name="image1551.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="38.10,335.87;745.42,408.61;783.76,792.01;39.90,770.51" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="27.64" ytl="326.39" xbr="793.25" ybr="805.83" z_order="0">
+    </box>
+  </image>
+  <image id="265" name="image1553.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="15.65" ytl="312.90" xbr="788.75" ybr="802.84" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="24.03,324.62;734.94,417.68;778.24,791.93;31.50,760.08" z_order="0">
+    </points>
+  </image>
+  <image id="266" name="image1555.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="21.64" ytl="314.40" xbr="776.77" ybr="801.34" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="27.96,318.97;724.01,412.36;765.29,791.61;34.67,759.10" z_order="0">
+    </points>
+  </image>
+  <image id="267" name="image1557.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="20.14" ytl="296.42" xbr="776.77" ybr="796.84" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="28.27,303.80;727.31,407.20;768.80,781.18;36.32,747.13" z_order="0">
+    </points>
+  </image>
+  <image id="268" name="image1559.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="37.56,287.70;725.46,393.58;770.04,774.37;46.22,733.51" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="27.64" ytl="279.94" xbr="775.27" ybr="783.36" z_order="0">
+    </box>
+  </image>
+  <image id="269" name="image1561.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="46.02,276.14;732.78,389.66;774.06,762.20;59.95,720.40" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="35.13" ytl="264.96" xbr="784.26" ybr="774.37" z_order="0">
+    </box>
+  </image>
+  <image id="271" name="image1564.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="47.11" ytl="245.48" xbr="788.75" ybr="766.88" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="61.46,262.07;744.28,380.95;782.17,753.94;75.57,708.62" z_order="0">
+    </points>
+  </image>
+  <image id="272" name="image1565.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="71.61,259.84;745.27,385.53;787.37,752.70;82.14,706.88" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="56.10" ytl="251.48" xbr="791.75" ybr="760.88" z_order="0">
+    </box>
+  </image>
+  <image id="273" name="image1567.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="84.11,250.52;759.18,378.65;805.19,746.71;97.01,697.70" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="71.08" ytl="243.98" xbr="811.23" ybr="760.88" z_order="0">
+    </box>
+  </image>
+  <image id="274" name="image1569.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="83.07" ytl="233.50" xbr="806.73" ybr="756.39" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="96.38,246.46;758.40,380.95;802.23,746.51;107.52,692.27" z_order="0">
+    </points>
+  </image>
+  <image id="275" name="image1570.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="90.56" ytl="230.50" xbr="806.73" ybr="759.39" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="100.09,238.17;760.75,379.96;801.62,747.75;113.71,690.16" z_order="0">
+    </points>
+  </image>
+  <image id="276" name="image1571.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="93.56" ytl="229.00" xbr="806.73" ybr="754.89" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="105.35,238.99;761.16,383.47;802.44,747.75;123.93,685.83" z_order="0">
+    </points>
+  </image>
+  <image id="277" name="image1573.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="117.18,235.32;768.06,386.15;808.92,749.48;135.76,681.12" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="107.04" ytl="232.00" xbr="815.72" ybr="760.88" z_order="0">
+    </box>
+  </image>
+  <image id="278" name="image1575.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="128.57,228.26;767.56,389.25;809.05,755.18;144.67,680.88" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="116.03" ytl="223.01" xbr="812.72" ybr="762.38" z_order="0">
+    </box>
+  </image>
+  <image id="279" name="image1577.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="119.03" ytl="212.52" xbr="821.71" ybr="756.39" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="132.27,220.85;774.66,390.26;817.66,750.58;152.91,670.18" z_order="0">
+    </points>
+  </image>
+  <image id="280" name="image1579.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="123.38,210.10;759.04,392.12;800.61,751.52;149.54,667.31" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="111.54" ytl="205.03" xbr="808.23" ybr="760.88" z_order="0">
+    </box>
+  </image>
+  <image id="281" name="image1580.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="116.03" ytl="202.03" xbr="811.23" ybr="756.39" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="131.62,206.16;761.91,392.48;805.98,750.44;153.84,663.37" z_order="0">
+    </points>
+  </image>
+  <image id="282" name="image1581.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="114.53" ytl="199.04" xbr="802.24" ybr="759.39" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="130.57,208.22;755.02,390.33;794.61,748.70;149.83,663.19" z_order="0">
+    </points>
+  </image>
+  <image id="283" name="image1583.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="117.53" ytl="197.54" xbr="790.25" ybr="766.88" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="136.57,204.08;748.00,396.28;788.42,756.17;150.76,662.44" z_order="0">
+    </points>
+  </image>
+  <image id="284" name="image1585.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="138.95,201.37;748.38,410.18;785.50,767.87;157.61,662.95" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="117.53" ytl="199.04" xbr="790.25" ybr="775.87" z_order="0">
+    </box>
+  </image>
+  <image id="285" name="image1586.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="145.08,204.42;748.78,415.97;783.35,776.64;161.08,666.74" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="125.02" ytl="197.54" xbr="788.75" ybr="784.86" z_order="0">
+    </box>
+  </image>
+  <image id="286" name="image1587.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="149.90,207.09;749.72,425.09;785.41,790.57;164.95,668.46" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="132.51" ytl="203.53" xbr="794.75" ybr="795.34" z_order="0">
+    </box>
+  </image>
+  <image id="287" name="image1588.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="137.01" ytl="208.03" xbr="790.25" ybr="808.83" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="154.17,215.38;749.38,438.34;787.20,801.88;167.86,676.47" z_order="0">
+    </points>
+  </image>
+  <image id="288" name="image1589.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="161.14,219.36;752.11,452.52;787.45,812.33;171.09,683.93" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="138.51" ytl="214.02" xbr="794.75" ybr="819.32" z_order="0">
+    </box>
+  </image>
+  <image id="291" name="image1592.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="187.74,700.28;183.01,235.90;759.18,482.71;793.15,850.77" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="157.98" ytl="236.49" xbr="800.74" ybr="858.27" z_order="0">
+    </box>
+  </image>
+  <image id="292" name="image1593.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="184.79,246.46;766.57,501.32;796.29,854.99;184.79,703.41" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="160.98" ytl="243.98" xbr="808.23" ybr="868.76" z_order="0">
+    </box>
+  </image>
+  <image id="293" name="image1594.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="163.98" ytl="246.98" xbr="799.24" ybr="871.76" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="190.74,250.92;759.88,513.20;791.83,865.39;187.02,712.33" z_order="0">
+    </points>
+  </image>
+  <image id="294" name="image1595.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="195.76,255.96;761.19,523.98;789.86,880.87;191.11,723.21" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="165.48" ytl="252.97" xbr="797.74" ybr="891.23" z_order="0">
+    </box>
+  </image>
+  <image id="298" name="image1599.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="169.97" ytl="281.44" xbr="796.24" ybr="934.68" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="210.06,287.33;759.88,571.90;787.37,927.80;198.17,746.51" z_order="0">
+    </points>
+  </image>
+  <image id="299" name="image1601.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="213.03,288.07;757.65,587.50;784.40,941.18;198.91,753.94" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="176.86" ytl="280.24" xbr="794.15" ybr="948.47" z_order="0">
+    </box>
+  </image>
+  <image id="300" name="image1603.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="180.46" ytl="275.45" xbr="793.25" ybr="955.66" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="215.83,278.54;756.89,596.25;784.36,948.59;204.48,750.92" z_order="0">
+    </points>
+  </image>
+  <image id="301" name="image1605.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="220.49,276.03;756.17,601.74;784.48,956.83;205.08,746.50" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="184.95" ytl="273.95" xbr="790.25" ybr="961.65" z_order="0">
+    </box>
+  </image>
+  <image id="302" name="image1607.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="227.30,272.01;760.04,605.68;787.13,963.86;211.39,749.29" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="186.45" ytl="266.46" xbr="794.75" ybr="975.14" z_order="0">
+    </box>
+  </image>
+  <image id="303" name="image1609.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="198.44" ytl="261.96" xbr="796.24" ybr="982.63" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="232.80,267.37;762.71,613.59;791.09,975.81;218.35,743.62" z_order="0">
+    </points>
+  </image>
+  <image id="304" name="image1610.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="208.92" ytl="260.47" xbr="806.73" ybr="985.62" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="237.62,262.55;773.80,616.00;800.89,975.46;226.01,746.28" z_order="0">
+    </points>
+  </image>
+  <image id="305" name="image1611.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="242.11,257.93;767.34,618.94;799.29,976.36;228.67,745.25" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="213.42" ytl="251.48" xbr="806.73" ybr="985.62" z_order="0">
+    </box>
+  </image>
+  <image id="306" name="image1613.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="247.94,248.80;769.50,622.88;802.61,986.21;235.47,741.98" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="219.41" ytl="248.48" xbr="806.73" ybr="994.61" z_order="0">
+    </box>
+  </image>
+  <image id="307" name="image1615.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="250.52,237.19;770.79,624.17;806.05,993.95;238.05,743.70" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="225.41" ytl="236.49" xbr="812.72" ybr="1002.10" z_order="0">
+    </box>
+  </image>
+  <image id="308" name="image1617.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="222.41" ytl="221.51" xbr="812.72" ybr="1002.10" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="249.93,227.64;769.42,627.01;805.33,996.04;235.07,734.74" z_order="0">
+    </points>
+  </image>
+  <image id="309" name="image1619.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="250.59,218.70;767.64,630.76;804.19,1006.64;235.90,730.02" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="219.41" ytl="215.52" xbr="806.73" ybr="1012.59" z_order="0">
+    </box>
+  </image>
+  <image id="310" name="image1620.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="225.41" ytl="208.03" xbr="808.23" ybr="1017.09" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="252.92,212.68;768.39,632.17;802.44,1009.35;239.51,724.01" z_order="0">
+    </points>
+  </image>
+  <image id="311" name="image1621.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="251.21,204.43;770.03,631.43;804.12,1011.64;240.76,722.75" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="215.82" ytl="202.33" xbr="815.12" ybr="1021.88" z_order="0">
+    </box>
+  </image>
+  <image id="312" name="image1623.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="219.41" ytl="178.06" xbr="812.72" ybr="1026.08" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="250.55,190.49;765.08,636.92;805.95,1015.23;237.55,713.07" z_order="0">
+    </points>
+  </image>
+  <image id="313" name="image1625.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="223.31" ytl="163.98" xbr="807.63" ybr="1026.98" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="246.78,173.79;761.45,633.92;800.84,1022.10;233.92,702.14" z_order="0">
+    </points>
+  </image>
+  <image id="314" name="image1626.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="245.18,167.27;758.07,636.30;799.86,1022.25;233.32,699.25" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="208.56" ytl="160.20" xbr="809.07" ybr="1032.19" z_order="0">
+    </box>
+  </image>
+  <image id="315" name="image1627.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="243.42,160.65;755.82,635.78;798.81,1023.48;228.01,694.18" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="212.16" ytl="154.81" xbr="803.67" ybr="1030.39" z_order="0">
+    </box>
+  </image>
+  <image id="316" name="image1629.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="239.02,144.22;752.61,638.89;795.66,1024.83;225.58,686.67" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="206.77" ytl="140.42" xbr="801.88" ybr="1032.19" z_order="0">
+    </box>
+  </image>
+  <image id="317" name="image1631.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="230.16,128.94;746.44,637.75;792.72,1032.20;213.14,676.87" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="194.18" ytl="126.04" xbr="798.28" ybr="1039.38" z_order="0">
+    </box>
+  </image>
+  <image id="318" name="image1633.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="201.37" ytl="106.26" xbr="794.68" ybr="1050.17" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="225.58,115.10;741.41,639.64;788.69,1035.03;215.38,669.75" z_order="0">
+    </points>
+  </image>
+  <image id="319" name="image1635.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="225.06,96.07;737.43,636.81;785.93,1038.76;210.61,653.84" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="197.78" ytl="90.08" xbr="792.89" ybr="1050.17" z_order="0">
+    </box>
+  </image>
+  <image id="320" name="image1636.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="186.99" ytl="82.89" xbr="794.68" ybr="1051.97" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="223.30,82.96;735.09,635.36;785.56,1038.77;208.07,646.41" z_order="0">
+    </points>
+  </image>
+  <image id="321" name="image1637.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="220.01,70.12;732.41,632.67;782.57,1033.39;208.96,635.06" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="183.39" ytl="66.71" xbr="787.49" ybr="1042.98" z_order="0">
+    </box>
+  </image>
+  <image id="322" name="image1638.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="186.99" ytl="54.12" xbr="785.70" ybr="1042.98" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="219.39,53.76;729.17,628.56;781.80,1032.57;205.97,624.43" z_order="0">
+    </points>
+  </image>
+  <image id="323" name="image1639.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="215.88,36.97;727.98,623.22;781.47,1030.06;204.43,612.27" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="188.79" ytl="37.94" xbr="787.49" ybr="1042.98" z_order="0">
+    </box>
+  </image>
+  <image id="324" name="image1640.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="215.77,25.38;726.59,620.82;779.74,1028.44;202.36,600.69" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="188.79" ytl="23.56" xbr="783.90" ybr="1039.38" z_order="0">
+    </box>
+  </image>
+  <image id="325" name="image1641.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="214.64,7.11;727.63,615.06;776.90,1020.55;204.48,589.38" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="190.59" ytl="5.58" xbr="782.10" ybr="1032.19" z_order="0">
+    </box>
+  </image>
+  <image id="326" name="image1642.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="216.12,1.13;725.22,610.84;777.67,1021.47;202.36,579.45" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="188.93" ytl="0.00" xbr="784.40" ybr="1038.34" z_order="0">
+    </box>
+  </image>
+  <image id="327" name="image1643.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="182.46" ytl="0.00" xbr="784.40" ybr="1029.71" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="218.23,0.53;723.48,606.82;778.46,1018.45;204.11,568.19" z_order="0">
+    </points>
+  </image>
+  <image id="328" name="image1644.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="220.46,1.12;721.54,602.07;778.61,1017.56;199.60,556.70" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="188.93" ytl="0.00" xbr="784.40" ybr="1029.71" z_order="0">
+    </box>
+  </image>
+  <image id="329" name="image1645.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="182.46" ytl="0.00" xbr="793.03" ybr="1029.71" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="217.49,0.53;721.25,596.42;777.71,1010.28;200.40,544.41" z_order="0">
+    </points>
+  </image>
+  <image id="330" name="image1646.jpg" width="1080" height="1920">
+    <box label="backboard" source="manual" occluded="0" xtl="175.99" ytl="2.74" xbr="786.56" ybr="1027.55" z_order="0">
+    </box>
+    <points label="backboard" source="manual" occluded="0" points="213.40,2.26;717.41,592.33;773.13,1009.04;197.30,527.94" z_order="0">
+    </points>
+  </image>
+  <image id="331" name="image1647.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="211.54,3.50;715.30,586.02;771.77,1003.59;195.20,518.41" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="180.30" ytl="2.74" xbr="782.24" ybr="1021.08" z_order="0">
+    </box>
+  </image>
+  <image id="332" name="image1649.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="203.37,1.27;711.59,575.62;766.57,993.19;187.77,487.94" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="167.36" ytl="0.00" xbr="780.09" ybr="1008.13" z_order="0">
+    </box>
+  </image>
+  <image id="333" name="image1651.jpg" width="1080" height="1920">
+    <points label="backboard" source="manual" occluded="0" points="192.46,0.94;702.82,563.73;756.32,987.42;176.41,457.81" z_order="0">
+    </points>
+    <box label="backboard" source="manual" occluded="0" xtl="158.73" ytl="2.74" xbr="767.14" ybr="997.35" z_order="0">
+    </box>
+  </image>
+</annotations>

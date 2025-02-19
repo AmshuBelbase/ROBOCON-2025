@@ -9,7 +9,7 @@ out_dir = r'C:\ROBOCON\YOLOV8\Pose-Segmentation\output-labels'
 if not os.path.exists(out_dir):
     os.makedirs(out_dir)
 
-file = minidom.parse('annotations.xml')
+file = minidom.parse('annotations (2).xml')
 
 images = file.getElementsByTagName('image')
 

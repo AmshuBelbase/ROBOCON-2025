@@ -4,6 +4,9 @@ if __name__ == '__main__':
     import numpy as np
     import matplotlib.pyplot as plt
     from matplotfile import showplot
+    from mpl_toolkits.mplot3d import Axes3D
+    from sklearn.preprocessing import PolynomialFeatures
+    from sklearn.linear_model import LinearRegression
 
     def quadarea(point):
         points=np.array(point,np.float64)
@@ -13,9 +16,10 @@ if __name__ == '__main__':
         x4, y4 = points[3]
         return abs(x1*y2 + x2*y3 + x3*y4 + x4*y1 - (y1*x2 + y2*x3 + y3*x4 + y4*x1)) / 2
 
-    model=YOLO('bestidk.pt') #Load The YOLO Model
+    i , sum , lastsum = (0,0,0)
+    model=YOLO('best.pt') #Load The YOLO Model
     img = cv2.imread('frame_0163.jpg') #Read the frame
-    cap = cv2.VideoCapture('video4.mp4')
+    cap = cv2.VideoCapture('video7.mp4')
     while True: 
         succ,frame = cap.read()
         if not succ:
@@ -43,7 +47,15 @@ if __name__ == '__main__':
             length_difference = coords[1][1]-coords[2][1] - (coords[0][1]-coords[3][1])
             print(length_difference)
             imag = cv2.putText(results[0].plot() , f"Area is: {area}" , (bbox_tlx-100,bbox_tly+5) , cv2.FONT_HERSHEY_SIMPLEX , 1 , color=(255,0,0) , thickness=2)
-            image = cv2.putText(imag , f"Difference: {length_difference}" , (bbox_tlx-100,bbox_tly-15) , cv2.FONT_HERSHEY_SIMPLEX , 1 , color=(255,0,0) , thickness=2)
+            if i==5:
+                i = 0
+                image = cv2.putText(imag , f"Difference: {float(sum/5)}" , (bbox_tlx-100,bbox_tly-15) , cv2.FONT_HERSHEY_SIMPLEX , 1 , color=(255,0,0) , thickness=2)
+                lastsum = float(sum/5)
+                sum = 0
+            else:
+                i=i+1
+                sum = sum + length_difference
+                image = cv2.putText(imag , f"Difference: {lastsum}" , (bbox_tlx-100,bbox_tly-15) , cv2.FONT_HERSHEY_SIMPLEX , 1 , color=(255,0,0) , thickness=2)
             cv2.imshow("Window" , image)
         else:
             cv2.imshow("Window",frame)
