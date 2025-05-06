@@ -67,6 +67,7 @@ public:
         // Disabling Nagle sends smaller packets immediately, reducing latency but increasing network overhead, as more packets are transmitted more frequently.
     }
 
+private:
     // Sends a request byte (0x01) to the server. Optionally prints debug information.
     void sendRequest(bool debugMode = false)
     {
@@ -86,19 +87,24 @@ public:
     }
 
     // Ensures TCP connection is maintained. Reconnects if connection is lost.
-    void MaintainConnection()
+    void MaintainConnection(bool debugMode = false)
     {
-        if (!client.connected())
+        while (!client.connected())
         {
+            Serial.print(".");
             client.connect(serverIP, 10069);
             client.setNoDelay(true); // Disable Nagle algorithm
         }
+        Serial.println();
     }
 
+public:
     // Sends request and receives structured data from server.
     // If enough bytes are received to match the size of type T, they are copied into the data pointer. Otherwise, waits until timeout.
     void getData(bool debugMode = false)
     {
+
+        MaintainConnection(debugMode);
         sendRequest(debugMode);
 
         uint32_t start = millis();
@@ -119,7 +125,7 @@ public:
             }
         }
 
-        MaintainConnection();
+        MaintainConnection(debugMode);
     }
 };
 
