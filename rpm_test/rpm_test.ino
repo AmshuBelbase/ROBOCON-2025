@@ -1,14 +1,22 @@
+#include <Encoder.h>
 #include "USBHost_t36.h"
 
+Encoder myEnc[5] = { Encoder(14,15), Encoder(39,38), Encoder(40,41), Encoder(0,1), Encoder(2,3) };
+
 // Motor driver pins
-int IN1 = 2; // Motor 1
-int IN2 = 6; // Motor 2
-int IN3 = 4; // Motor 3
+int IN1 = 20; // Motor 1
+int IN2 = 17; // Motor 2
+int IN3 = 21; // Motor 3
 
 // PWM pins for speed control
-int ENA = 3; // Motor 1 PWM pin
-int ENB = 7; // Motor 2 PWM pin
-int ENC = 5; // Motor 3 PWM pin
+int ENA = 22; // Motor 1 PWM pin
+int ENB = 19; // Motor 2 PWM pin
+int ENC = 23; // Motor 3 PWM pin
+
+long currentCounts[5] = {0,0,0,0,0};
+volatile long lastCount[5] = {0,0,0,0,0};        
+volatile double rpm[5] = {0,0,0,0,0};          // Stores the calculated RPM
+long positionChange[5] = {0,0,0,0,0};
 
 //PS4 connection 
 USBHost myusb;   // initializes and manages the USB host port, enabling Teensy to detect and commuincate with USB bluetooth dongle
@@ -27,6 +35,9 @@ void setup() {
   pinMode(ENA, OUTPUT);
   pinMode(ENB, OUTPUT);
   pinMode(ENC, OUTPUT);
+
+  analogWriteResolution(14);
+  analogWriteFrequency(0, 9000);
 
   //teensy led
   pinMode(13, OUTPUT);
@@ -70,37 +81,57 @@ void loop() {
     delay(500);
   }
 
+  // Calculate RPM
+  for (int i=0; i<5; i++){
+    currentCounts[i] = myEnc[i].read();
+    positionChange[i] = currentCounts[i] - lastCount[i];
+    rpm[i] = (positionChange[i] / 1300.0) * (60 * (1000.0 / 75));
+    lastCount[i] = currentCounts[i];
+  }
+
+
+  Serial.print("rpm1: ");
+  Serial.println(rpm1);
+  Serial.print(" rpm2: ");
+  Serial.println(rpm2);
+  Serial.print(" rpm3: ");
+  Serial.println(rpm3);
+  Serial.print(" rpm4: ");
+  Serial.println(rpm4);
+  Serial.print(" rpm5: ");
+  Serial.println(rpm5);
+
   // Calculate wheel speeds based on inverse kinematics
   int V1 = ((x) * (-0.67) + (y) * 0 + (leftX) * (0.33));        
   int V2 = ((x) * (0.33) + (y) * (-0.57) + (leftX) * (0.33)); 
   int V3 = ((x) * (0.33) + (y) * (0.57) + (leftX) * (0.33)); 
 
-  Serial.print("V1: ");
-  Serial.println(V1);
-  Serial.print("V2: ");
-  Serial.println(V2);
-  Serial.print("V3: ");
-  Serial.println(V3);
+  // Serial.print("V1: ");
+  // Serial.println(V1);
+  // Serial.print("V2: ");
+  // Serial.println(V2);
+  // Serial.print("V3: ");
+  // Serial.println(V3);
 
   // Set motor speeds based on calculated velocities
-  //runMotor(IN1, ENA, V1);
-  //runMotor(IN2, ENB, V2);
-  //runMotor(IN3, ENC, V3);
+  runMotor(IN1, ENA, V1);
+  runMotor(IN2, ENB, V2);
+  runMotor(IN3, ENC, V3);
 
-  // delay(200);  // Small delay for stability
+  delay(200);  // Small delay for stability
+
+
 }
 
 void runMotor(int IN, int EN, float speed) {
-  int pwmValue = map(abs(speed), 0, 127, 0, 255);
-  pwmValue = constrain(pwmValue, 0, 100); // Ensure pwmValue is between 0 and 255
+  int pwmValue = map(abs(speed), 0, 127, 0, 16383);
+  pwmValue = constrain(pwmValue, 0, 8000); // Ensure pwmValue is between 0 and 255
   if (speed > 0) {      //to check direction: if +ve - HIGH, else LOW
     digitalWrite(IN, HIGH);
   } else if (speed < 0) {
     digitalWrite(IN, LOW);
-    speed = -speed;
   } else {
     pwmValue = 0;
   }
   analogWrite(EN, pwmValue);
 }
-

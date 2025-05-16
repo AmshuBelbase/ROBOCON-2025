@@ -2,33 +2,19 @@
 #include <IntervalTimer.h> 
 #include "USBHost_t36.h"
 
-
-Encoder myEnc[3] = { Encoder(14,15), Encoder(39,38), Encoder(40,41) };
-
-Encoder myEnc[3] = { Encoder(36,33), Encoder(38,37), Encoder(40,39)};
-
+Encoder myEnc[3] = { Encoder(17, 16), Encoder(14, 15), Encoder(23, 22)};
 
 //PS4 connection 
 USBHost myusb;   // initializes and manages the USB host port, enabling Teensy to detect and commuincate with USB bluetooth dongle
 USBHIDParser hid1(myusb);  //works behind the scenes to parse HID data that comes from the PS4 controller, such as joystick movements and button presses.
 JoystickController joystick(myusb);
-
-BluetoothController bluet(myusb, true, "0000");   // Version does pairing to device
-
-//coordinates of joystick (x,y -> right joystick; leftX -> left joystick)
-int x, y, leftX;  
-
-int PWM[3] = {22,19,23};
-int DIR[3] = {20,17,21};
-
 // BluetoothController bluet(myusb, true, "0000"); 
 BluetoothController bluet(myusb);   // Version does pairing to device
 
 //coordinates of joystick (x,y -> right joystick; leftX -> left joystick)
 int x, y, leftX;  
-int PWM[3] = {4,5,3};
-int DIR[3] = {6,7,2};
-
+int PWM[3] = {3,5,9};
+int DIR[3] = {2,4,8};
 
 long currentCounts[3] = {0,0,0};
 volatile long lastCount[3] = {0,0,0};      
@@ -36,50 +22,23 @@ volatile double rpm[3] = {0,0,0};          // Stores the calculated RPM
 long positionChange[3] = {0,0,0};
 
 //pid constants
-
-float kp = 0.0;
-float ki = 0.0;
-float kd = 0.0;   
-
-
-float kp[3] = {9.0, 9.0, 9.0};
-float ki[3] = {165.0, 165.0, 165.0};
-float kd[3] = {0.5, 0.5, 0.5}; 
+float kp[3] = {0.0, 0.0, 0.0};
+float ki[3] = {0.0, 0.0, 0.0};
+float kd[3] = {0.0, 0.0, 0.0}; 
 
 volatile float sp[3]={0,0,0};
-
 float pid[3] = {0.0, 0.0, 0.0};
 float err[3] = {0.0, 0.0, 0.0};
 float prev_err[3] = {0.0, 0.0, 0.0};
 float integ[3] = {0.0, 0.0, 0.0};
-
-float der[3] = {0.0, 0.0, 0.0};
-
 float der[3] = {0.0, 0.0, 0.0}; 
 
-float max_rpm = 300;
-
+float max_rpm = 500;
 
 IntervalTimer timer; // Timer object for periodic execution
 
 void input() {
   if (Serial.available() > 0) {
-
-  
-  String input = Serial.readString();
-
-  kp = input.substring(0,3).toFloat();    //20
-  ki = input.substring(3,6).toFloat();    //100
-  kd = input.substring(6).toFloat();      //0.5
-  }
-
-}
-
-void calculatePID() {
-  unsigned long startTime = micros();
-
-  input();
-
     String input = Serial.readString();       // 1,009.000,165.000,000.500
     int i = input.substring(0,1).toInt();
     kp[i-1] = input.substring(2,9).toFloat();
@@ -93,25 +52,11 @@ void calculatePID() {
 void calculatePID() {
   // unsigned long startTime = micros();
 
-  // input();
-
+  input();
 
   myusb.Task();   // Handle USB host tasks
 
   if (joystick.available()) {
-
-
-    // Left Stick values (axes 0 and 1)
-    int leftStickX = joystick.getAxis(0);
-    leftX = map(leftStickX, 0, 255, -127, 127);
-
-    // Right Stick values (axes 2 and 5)
-    int rightStickX = joystick.getAxis(2);
-    x = map(rightStickX, 0, 255, -127, 127);
-
-    int rightStickY = joystick.getAxis(5);
-    y = map(rightStickY, 0, 255, 127, -127);
-
     // if(joystick.getButtons()){
     //   // Serial.println("value");
 
@@ -134,24 +79,10 @@ void calculatePID() {
     // y = round(y/10)*10;
     // leftX = round(leftX/10)*10;
 
-
     //to ignore small joystick values
     if (abs(x) < 5) x = 0;
     if (abs(y) < 5) y = 0;
     if (abs(leftX) < 5) leftX = 0;
-
-  }
-  else{
-    Serial.print("Joystick Not Found");
-    delay(500);
-  }
-
-  int V1 = ((x) * (-0.67) + (y) * 0 + (leftX) * (0.33));        
-  int V2 = ((x) * (0.33) + (y) * (-0.57) + (leftX) * (0.33)); 
-  int V3 = ((x) * (0.33) + (y) * (0.57) + (leftX) * (0.33)); 
-
-  float sp[3] = {V1, V2, V3};
-
 
     // Serial.printf(" x:%d\n",x);
     // Serial.printf(" y:%d",y);
@@ -206,7 +137,6 @@ void calculatePID() {
   // Serial.print("V3: ");
   // Serial.println(V3);
 
-
   // Calculate RPM
   for (int i=0; i<3; i++){
     currentCounts[i] = myEnc[i].read();
@@ -215,13 +145,9 @@ void calculatePID() {
     lastCount[i] = currentCounts[i];
 
   }
-
-
-  }
   Serial.printf(" rpm1:%f", rpm[0]);
   Serial.printf(" rpm2:%f", rpm[1]);
   Serial.printf(" rpm3:%f\n", rpm[2]);
-
 
   //PID Control
   for (int i=0; i<3; i++){
@@ -229,16 +155,10 @@ void calculatePID() {
     integ[i] = integ[i] + (err[i]*0.075);   
     der[i] = (err[i]-prev_err[i])/0.075;
 
-
-    pid[i] = (kp*err[i]) + (ki*integ[i]) + (kd*der[i]);
-    prev_err[i] = err[i];
-
-    pid[i] = constrain(pid[i], -16383, 16383);
-
     pid[i] = (kp[i]*err[i]) + (ki[i]*integ[i]) + (kd[i]*der[i]);
     prev_err[i] = err[i];
 
-    pid[i] = constrain(pid[i], -16383, 16383);
+    pid[i] = constrain(pid[i], -8191, 8191);
 
   //  Serial.printf(" V1:%d",V1);
   //   Serial.printf(" V2:%d",V2);
@@ -262,37 +182,20 @@ void calculatePID() {
     // Serial.println(pid[1]);
     // Serial.print("pid3: ");
     // Serial.println(pid[2]);
-
   }
 
   // Set motor speeds based on calculated velocities
   runMotor(PWM[0], DIR[0], pid[0]);
-
-  runMotor(PWM[0], DIR[1], pid[1]);
-  runMotor(PWM[2], DIR[2], pid[2]);
-
-  delay(200);  // Small delay for stability
-
-  unsigned long currentTime = micros();
-  unsigned long time = currentTime-startTime;
-
   runMotor(PWM[1], DIR[1], pid[1]);
   runMotor(PWM[2], DIR[2], pid[2]);
-  
+
   // delay(200);  // Small delay for stability
 
   // unsigned long currentTime = micros();
   // unsigned long time = currentTime-startTime;
-
   // Serial.println(time);
   
 }
-
-
-void runMotor(int IN, int EN, float speed) {
-  int pwmValue = map(abs(speed), 0, 127, 0, 16383);
-
-  if (speed > 0) {      //to check direction: if +ve - HIGH, else LOW
 
 void runMotor(int EN, int IN, float speed) {
   int pwmValue = abs(speed);
@@ -300,7 +203,6 @@ void runMotor(int EN, int IN, float speed) {
   // int pwmValue = map(abs(speed), 0, 127, 0, 16383);
 
   if (speed > 0) {      // to check direction: if +ve - HIGH, else LOW
-
     digitalWrite(IN, HIGH);
   } else if (speed < 0) {
     digitalWrite(IN, LOW);
@@ -325,12 +227,8 @@ void setup() {
     digitalWrite(DIR[i], LOW);
 }
 
-  analogWriteResolution(14);
-  analogWriteFrequency(0, 9000);
-
-
-  myusb.begin();
-  delay(2000);
+  analogWriteResolution(13);
+  analogWriteFrequency(0, 18000);
 
  // myusb.begin();
   // delay(2000);
@@ -341,7 +239,6 @@ void setup() {
             myusb.begin();
             myusb.Task();
 
-
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 
@@ -349,10 +246,6 @@ void setup() {
 }
 
 void loop() {
-
-
-}
-
   // digitalWrite(0, HIGH);
   // analogWrite(1, 12000);
 
@@ -363,4 +256,3 @@ void loop() {
   // analogWrite(7, 12000);
 
 }
-

@@ -1,20 +1,22 @@
 #include "USBHost_t36.h"
 
 // Motor driver pins
-int IN1 = 2; // Motor 1
-int IN2 = 6; // Motor 2
-int IN3 = 4; // Motor 3
+int IN1 = 4; // Motor 1
+int IN2 = 0; // Motor 2
+int IN3 = 2; // Motor 3
 
 // PWM pins for speed control
-int ENA = 3; // Motor 1 PWM pin
-int ENB = 7; // Motor 2 PWM pin
-int ENC = 5; // Motor 3 PWM pin
+int ENA = 5; // Motor 1 PWM pin
+int ENB = 1; // Motor 2 PWM pin
+int ENC = 3; // Motor 3 PWM pin
+
 
 //PS4 connection 
 USBHost myusb;   // initializes and manages the USB host port, enabling Teensy to detect and commuincate with USB bluetooth dongle
 USBHIDParser hid1(myusb);  //works behind the scenes to parse HID data that comes from the PS4 controller, such as joystick movements and button presses.
 JoystickController joystick(myusb);
-BluetoothController bluet(myusb, true, "0000");   // Version does pairing to device
+// BluetoothController bluet(myusb, true, "0000");   // Version does pairing to device
+BluetoothController bluet(myusb);
 
 //coordinates of joystick (x,y -> right joystick; leftX -> left joystick)
 int x, y, leftX;  
@@ -54,14 +56,19 @@ void loop() {
 
     // Left Stick values (axes 0 and 1)
     int leftStickX = joystick.getAxis(0);
-    leftX = map(leftStickX, 0, 255, -127, 127);
+    leftX = map(leftStickX, 0, 255, -100, 100);
     
 
     // Right Stick values (axes 2 and 5)
     int rightStickX = joystick.getAxis(2);
-    x = map(rightStickX, 0, 255, -127, 127);
+    x = map(rightStickX, 0, 255, -100, 100);
     int rightStickY = joystick.getAxis(5);
-    y = map(rightStickY, 0, 255, 127, -127);
+    y = map(rightStickY, 0, 255, 100, -100);
+
+    // round off 
+    x = round(x/10)*10;
+    y = round(y/10)*10;
+    leftX = round(leftX/10)*10;
 
     //to ignore small joystick values
     if (abs(x) < 5) x = 0;
@@ -88,16 +95,20 @@ void loop() {
   // Serial.println(V3);
 
   // Set motor speeds based on calculated velocities
-  runMotor(IN1, ENA, V1);
-  runMotor(IN2, ENB, V2);
-  runMotor(IN3, ENC, V3);
+  runMotor(1, IN1, ENA, V1);
+  runMotor(2, IN2, ENB, V2);
+  runMotor(3, IN3, ENC, V3);
 
-  delay(200);  // Small delay for stability
+  // delay(200);  // Small delay for stability
 }
 
-void runMotor(int IN, int EN, float speed) {
-  int pwmValue = map(abs(speed), 0, 127, 0, 16383);
-  pwmValue = constrain(pwmValue, 0, 8000); // Ensure pwmValue is between 0 and 255
+void runMotor(int m, int IN, int EN, float speed) {
+  int pwmValue = map(abs(speed), 0, 72, 0, 4000);
+  // pwmValue = constrain(pwmValue, 0, 8000); // Ensure pwmValue is between 0 and 255
+  Serial.print(m);
+  Serial.print("speed: ");
+  Serial.println(pwmValue);
+
   if (speed > 0) {      //to check direction: if +ve - HIGH, else LOW
     digitalWrite(IN, HIGH);
   } else if (speed < 0) {
@@ -107,4 +118,3 @@ void runMotor(int IN, int EN, float speed) {
   }
   analogWrite(EN, pwmValue);
 }
-

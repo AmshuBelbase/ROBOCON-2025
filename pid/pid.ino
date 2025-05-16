@@ -8,7 +8,7 @@ Encoder myEnc(9, 8);
 USBHost myusb;   // initializes and manages the USB host port, enabling Teensy to detect and commuincate with USB bluetooth dongle
 USBHIDParser hid1(myusb);  //works behind the scenes to parse HID data that comes from the PS4 controller, such as joystick movements and button presses.
 JoystickController joystick(myusb);
-BluetoothController bluet(myusb, true, "0000");   // Version does pairing to device
+BluetoothController bluet(myusb);   // Version does pairing to device
 
 //coordinates of joystick (x,y -> right joystick; leftX -> left joystick)
 int y; 
@@ -34,7 +34,7 @@ float integ=0.0;
 float der=0.0;
 
 IntervalTimer timer; // Timer object for periodic execution
-
+/ṀṀṀ
 void calculatePID() {
   unsigned long startTime = micros();
 
