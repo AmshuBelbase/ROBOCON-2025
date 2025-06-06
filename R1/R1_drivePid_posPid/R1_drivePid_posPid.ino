@@ -5,6 +5,11 @@ IntervalTimer ps4_timer;
 IntervalTimer pid_timer;
 IntervalTimer pos_pid_timer;//Hardware interrupt timers
 
+<<<<<<< HEAD
+
+int pwm_pin[3] = { 3, 5, 7};
+int dir_pin[3] = { 2, 4, 6};
+=======
                                                         ____________________________________________  
                                                        |               |  pin[0]  |                |
                                                        |               |          |                |                                                                              
@@ -24,6 +29,7 @@ IntervalTimer pos_pid_timer;//Hardware interrupt timers
                                                           
 int pwm_pin[3] = { 3, 7, 5};                            
 int dir_pin[3] = { 2, 6, 4};
+>>>>>>> refs/remotes/origin/Siddhant
 
 
 Encoder m[3] = { Encoder(28, 27), Encoder(31, 30), Encoder(12, 11) };
