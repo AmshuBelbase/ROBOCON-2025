@@ -5,7 +5,7 @@ import serial
 import time
 
 # Constants
-TEENSY_PORT = "/dev/tty.usbmodem166413901"
+TEENSY_PORT = "/dev/tty.usbmodem166413901"#testing
 BAUD_RATE = 2000000
 CONFIDENCE_THRESHOLD = 0.25
 FRAME_SKIP = 2  # Skip every N frames to maintain real-time performance
