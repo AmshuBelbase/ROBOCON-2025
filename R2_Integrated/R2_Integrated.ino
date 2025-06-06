@@ -143,7 +143,9 @@ void pid() {
     // else if (jetdata.axis[2] < 120)
     //   w = map(jetdata.axis[2], 125, 0, 0, -255);
     // else
+    if(jetdata.r2)
       w = jetdata.r2;
+    else
       w = -1*jetdata.l1;
 
     int y = psAxisY;
