@@ -2,10 +2,13 @@
 name: Ensure pre_main is up to date with main
 
 on:
-  pull_request:
+  push:
     branches:
       - pre_main
-
+  pull_request:
+    branches:
+      - main
+      
 jobs:
   check-sync:
     runs-on: ubuntu-latest
