@@ -7,7 +7,7 @@ ser = serial.Serial('COM14', 9600)
 
 x_data, y_data = [], []
 
-# Initialize plot with fixed axes
+# Initialize plot with fixed axes2a
 fig, ax = plt.subplots()
 ax.set_xlim(-400, 400)  # Fixed range for X (-400 to 400 cm)
 ax.set_ylim(-400, 400)  # Fixed range for Y (-400 to 400 cm)
