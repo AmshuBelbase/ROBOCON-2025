@@ -1,0 +1,24 @@
+# .github/workflows/check-sync.yml
+name: Ensure pre_main is up to date with main
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v3
+
+      - name: Fetch main branch
+        run: git fetch origin main
+
+      - name: Check for differences with main
+        run: |
+          git diff --quiet origin/main || {
+            echo "❌ This branch is not synced with main. Please merge main into your branch.";
+            exit 1;
+          }
