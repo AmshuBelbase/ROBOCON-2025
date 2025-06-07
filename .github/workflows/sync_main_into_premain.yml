@@ -28,7 +28,7 @@ jobs:
 
       - name: Merge main into pre_main
         run: |
-          git merge origin/main --no-edit || echo "No changes to merge"
+          git merge origin/main --no-edit
 
       - name: Push changes
         run: |
