@@ -15,18 +15,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch full history for commit checks
+          ref: pre_main
+          fetch-depth: 0 # Fetch full history for commit checks
+
+      - name: Fetch main branch
+        run: git fetch origin main
 
       - name: Get latest main commit
         id: main-commit
         run: |
-          git fetch origin main
-          echo "main_commit=$(git rev-parse origin/main)" >> $GITHUB_OUTPUT
+          main_sha=$(git rev-parse origin/main)
+          echo "main_sha=${main_sha}" >> $GITHUB_OUTPUT
+          echo "Latest main commit: ${main_sha}"
 
-      - name: Check if commit exists in pre_main
+      - name: Verify pre_main contains main's commit
         run: |
-          if ! git merge-base --is-ancestor "${{ steps.main-commit.outputs.main_commit }}" HEAD; then
-            echo "❌ pre_main is missing main's latest commit (${{ steps.main-commit.outputs.main_commit }})"
-            echo "::error::Branch pre_main must include main's latest commit"
+          if ! git merge-base --is-ancestor "${{ steps.main-commit.outputs.main_sha }}" HEAD; then
+            echo "::error::pre_main is missing main's latest commit (${{ steps.main-commit.outputs.main_sha }})"
+            echo "Please merge main into pre_main:"
+            echo "  git checkout pre_main"
+            echo "  git merge main"
+            echo "  git push origin pre_main"
             exit 1
+          else
+            echo "✓ pre_main contains main's latest commit"
           fi
