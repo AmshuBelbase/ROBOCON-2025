@@ -1,5 +1,6 @@
 import cv2
 
+
 def list_connected_cameras():
     index = 0
     camera_indices = []
@@ -16,6 +17,7 @@ def list_connected_cameras():
         index += 1
 
     return camera_indices
+
 
 if __name__ == "__main__":
     cameras = list_connected_cameras()
