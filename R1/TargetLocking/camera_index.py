@@ -1,5 +1,4 @@
 import cv2
-# hii
 
 
 def list_connected_cameras():
