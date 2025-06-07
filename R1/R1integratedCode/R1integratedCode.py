@@ -12,7 +12,7 @@ import select
 
 
 #Define packing format (4 integers , 6 short integers - 4 bytes , 2 bytes)
-pack_format = '<6i8h'
+pack_format = '<4i6h'
 
 #Globals to hold motor speeds
 bldc_rpm = 0
@@ -247,11 +247,6 @@ def ps4_process(shared):
     #Map stick values
     def map_stick(val):
         return round((val + 1) * 127.5)  # -1 to 1 to 0 to 255
-    
-    def map_to_255(value: float) -> int:
-        value = max(0.0, min(1.0, value))
-        return int(round(value * 255))
-
 
 
     #Initialize joystick
@@ -286,12 +281,12 @@ def ps4_process(shared):
                 rx_mapped = map_stick(rx)
                 ry_mapped = map_stick(ry)
 
-                l2 = map_to_255(joystick.get_axis(3))
-                r2 = map_to_255(joystick.get_axis(4))
+                # l2 = int(joystick.get_axis(3) + 1)
+                # r2 = int(joystick.get_axis(4) + 1)
 
                 cross = joystick.get_button(1)
                 circle = joystick.get_button(2)
-                square = joystick.get_button(0)
+                # square = joystick.get_button(0)
                 triangle = joystick.get_button(3)
 
                 l1 = joystick.get_button(4)
@@ -306,19 +301,15 @@ def ps4_process(shared):
                 
                 #Assign all values to the shared dictionary
                 shared["axis"] = [lx_mapped, ly_mapped, rx_mapped, ry_mapped]
-                shared["l1"] = l1
                 shared["r1"] = r1
-                shared["l2"] = l2
-                shared["r2"] = r2
                 shared["cross"] = cross
-                shared["square"] = square
                 shared["circle"] = circle
                 shared["triangle"] = triangle
                 shared["bldc_rpm"] = bldc_rpm
 
                 #Print the values
-                print(int(shared['axis'][0]), int(shared['axis'][1]), int(shared['axis'][2]), int(shared['axis'][3]), int(shared['l2']),int(shared['r2']),
-                        int(shared['r1']),int(shared['l1']), int(shared['cross']), int(shared['square']), int(shared['circle']),
+                print(int(shared['axis'][0]), int(shared['axis'][1]), int(shared['axis'][2]), int(shared['axis'][3]),
+                            int(shared['r1']), int(shared['cross']), int(shared['circle']),
                             int(shared['triangle']), int(shared['pwm']), int(shared['bldc_rpm']))
                 
 
@@ -337,7 +328,7 @@ def send_data(shared):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
-    sock.bind(('0.0.0.0', 45000)) #10069
+    sock.bind(('0.0.0.0', 10069))
     sock.listen()
     sock.setblocking(False)
 
@@ -367,12 +358,12 @@ def send_data(shared):
                         #Send a structured response and print it for debugging
                         response = struct.pack(
                             pack_format,
-                            int(shared['axis'][0]), int(shared['axis'][1]), int(shared['axis'][2]), int(shared['axis'][3]),int(shared['l2']),int(shared['r2']),
-                            int(shared['r1']),int(shared['l1']), int(shared['cross']),int(shared['square']) ,int(shared['circle']),
+                            int(shared['axis'][0]), int(shared['axis'][1]), int(shared['axis'][2]), int(shared['axis'][3]),
+                            int(shared['r1']), int(shared['cross']), int(shared['circle']),
                             int(shared['triangle']), int(shared['pwm']), int(shared['bldc_rpm'])
                         )
-                        print("Sent: ", int(shared['axis'][0]), int(shared['axis'][1]), int(shared['axis'][2]), int(shared['axis'][3]), int(shared['l2']),int(shared['r2']),
-                            int(shared['r1']),int(shared['l1']), int(shared['cross']), int(shared['square']), int(shared['circle']),
+                        print("Sent: ", int(shared['axis'][0]), int(shared['axis'][1]), int(shared['axis'][2]), int(shared['axis'][3]),
+                            int(shared['r1']), int(shared['cross']), int(shared['circle']),
                             int(shared['triangle']), int(shared['pwm']), int(shared['bldc_rpm']))
                         s.sendall(response)
                 except:
@@ -386,14 +377,10 @@ if __name__ == "__main__":
     manager = Manager()
     shared = manager.dict({
         "axis": [128, 128, 128, 128],
-        "l1":0,
         "r1": 0,
-        "l2":0,
-        "r2": 0,
         "cross": 0,
         "circle": 0,
         "triangle": 0,
-        "square": 0,
         "bldc_rpm": 0,
         'pwm' : 0,
         'distance' : 0,
