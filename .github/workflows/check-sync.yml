@@ -22,7 +22,7 @@ jobs:
       - name: Check if main is ancestor of this branch
         run: |
           git fetch origin main
-          git merge-base --is-ancestor origin/main HEAD || {
+          git merge-base --is-ancestor origin/main origin/pre_main || {
             echo "❌ This branch is not up to date with main. Please merge or rebase main into your branch.";
             exit 1;
           }
