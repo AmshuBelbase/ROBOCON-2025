@@ -1,0 +1,32 @@
+name: Ensure pre_main contains main's latest commit
+
+on:
+  push:
+    branches:
+      - pre_main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch full history for commit checks
+
+      - name: Get latest main commit
+        id: main-commit
+        run: |
+          git fetch origin main
+          echo "main_commit=$(git rev-parse origin/main)" >> $GITHUB_OUTPUT
+
+      - name: Check if commit exists in pre_main
+        run: |
+          if ! git merge-base --is-ancestor "${{ steps.main-commit.outputs.main_commit }}" HEAD; then
+            echo "❌ pre_main is missing main's latest commit (${{ steps.main-commit.outputs.main_commit }})"
+            echo "::error::Branch pre_main must include main's latest commit"
+            exit 1
+          fi
