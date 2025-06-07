@@ -5,8 +5,6 @@ import cv2
 import serial
 import time
 
-#normal edit
-
 teensy_port = "/dev/tty.usbmodem166413901"  
 baud_rate = 2000000
 
