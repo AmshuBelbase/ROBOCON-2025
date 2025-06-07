@@ -5,9 +5,7 @@ import cv2
 import serial
 import time
 
-# on test
-
-teensy_port = "/dev/tty.usbmodem166413901"
+teensy_port = "/dev/tty.usbmodem166413901"  
 baud_rate = 2000000
 
 with serial.Serial(teensy_port, baud_rate, timeout=1) as ser:
