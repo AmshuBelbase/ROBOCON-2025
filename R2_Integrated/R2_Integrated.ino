@@ -122,18 +122,18 @@ void pid() {
   int psAxisX = 0;
     int psAxisY = 0;
     int w = 0;
-    if (jetdata.axis[0] < 125)
-      psAxisX = map(jetdata.axis[0], 125, 0, 0, -255);
+    if (jetdata.axis[2] < 125)
+      psAxisX = map(jetdata.axis[2], 125, 0, 0, -255);
 
-    else if (jetdata.axis[0] > 135)
-      psAxisX = map(jetdata.axis[0], 135, 255, 0, 255);
+    else if (jetdata.axis[2] > 135)
+      psAxisX = map(jetdata.axis[2], 135, 255, 0, 255);
     else
       psAxisX = 0;
 
-    if (jetdata.axis[2] > 135)
+    if (jetdata.axis[1] > 135)
       psAxisY = map(jetdata.axis[1], 135, 255, 0, -255);
 
-    else if (jetdata.axis[2] < 120)
+    else if (jetdata.axis[1] < 120)
       psAxisY = map(jetdata.axis[1], 125, 0, 0, 255);
     else
       psAxisY = 0;
@@ -146,7 +146,7 @@ void pid() {
     if(jetdata.r2)
       w = jetdata.r2;
     else
-      w = -1*jetdata.l1;
+      w = -1*jetdata.l2;
 
     int y = psAxisY;
     int x = psAxisX;

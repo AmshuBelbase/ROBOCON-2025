@@ -17,6 +17,7 @@ def list_connected_cameras():
 
     return camera_indices
 
+
 if __name__ == "__main__":
     cameras = list_connected_cameras()
     if cameras:
