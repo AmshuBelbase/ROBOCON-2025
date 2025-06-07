@@ -28,7 +28,10 @@ jobs:
 
       - name: Merge main into pre_main
         run: |
-          git merge origin/main --no-edit
+          git merge origin/main --no-edit || {
+            echo "::error::Merge conflict occurred. Manual intervention required.";
+            exit 1;
+          }
 
       - name: Push changes
         run: |
