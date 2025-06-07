@@ -1,0 +1,35 @@
+name: Sync main into pre_main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout pre_main branch
+        uses: actions/checkout@v3
+        with:
+          ref: pre_main
+          fetch-depth: 0  # Full history for merge
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Add remote and fetch main
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git fetch origin main
+
+      - name: Merge main into pre_main
+        run: |
+          git merge origin/main --no-edit || echo "No changes to merge"
+
+      - name: Push changes
+        run: |
+          git push origin pre_main
