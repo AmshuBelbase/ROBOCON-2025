@@ -1,25 +1,42 @@
-# .github/workflows/check-sync.yml
-name: Ensure pre_main is up to date with main
+name: Ensure pre_main contains main's latest commit
 
 on:
-  pull_request:
+  push:
     branches:
       - pre_main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   check-sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout PR branch
+      - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: pre_main
+          fetch-depth: 0 # Fetch full history for commit checks
 
       - name: Fetch main branch
         run: git fetch origin main
 
-      - name: Check if main is ancestor of this branch
+      - name: Get latest main commit
+        id: main-commit
         run: |
-          git fetch origin main
-          git merge-base --is-ancestor origin/main HEAD || {
-            echo "❌ This branch is not up to date with main. Please merge or rebase main into your branch.";
-            exit 1;
-          }
+          main_sha=$(git rev-parse origin/main)
+          echo "main_sha=${main_sha}" >> $GITHUB_OUTPUT
+          echo "Latest main commit: ${main_sha}"
+
+      - name: Verify pre_main contains main's commit
+        run: |
+          if ! git merge-base --is-ancestor "${{ steps.main-commit.outputs.main_sha }}" HEAD; then
+            echo "::error::pre_main is missing main's latest commit (${{ steps.main-commit.outputs.main_sha }})"
+            echo "Please merge main into pre_main:"
+            echo "  git checkout pre_main"
+            echo "  git merge main"
+            echo "  git push origin pre_main"
+            exit 1
+          else
+            echo "✓ pre_main contains main's latest commit"
+          fi
