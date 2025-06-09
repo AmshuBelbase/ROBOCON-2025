@@ -1,6 +1,5 @@
 import cv2
 
-# Siddhant changes
 
 def list_connected_cameras():
     index = 0
