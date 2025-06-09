@@ -10,7 +10,6 @@ from typing import List
 import struct
 import select
 
-#yeah
 # Define packing format (4 integers , 6 short integers - 4 bytes , 2 bytes)
 pack_format = '<6i8h'
 
