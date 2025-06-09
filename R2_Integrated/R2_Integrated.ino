@@ -1,7 +1,10 @@
 // Move ClientServerEthernet.h to a subfolder of your Arduino/libraries/ directory.
 #include <ClientServerEthernet.h>
 #include <Encoder.h>
+#include <VescUart.h>
 
+
+VescUart UART;
 IntervalTimer pidTimer;
 
 int pwm_pin[3] = { 6, 4, 8 };
@@ -15,6 +18,8 @@ int feed_dir=12;
 
 int rot_pwm=36;
 int rot_dir=37;
+
+int bldc_rpm=0;
 Encoder m[3] = { Encoder(23, 22), Encoder(21, 20), Encoder(17, 18) };
 
 volatile float rpm_rt[3] = { 0, 0, 0 };
@@ -81,6 +86,15 @@ void setup() {
   // Initialize the Ethernet client-server connection with IPs, subnet, and a pointer to the data structure
   con = ClientServerEthernet<ControllerData>(client_ip, subnet_mask, server_ip, &jetdata);
     pidTimer.begin(pid, 75000);
+
+
+      Serial1.begin(115200);
+
+  while (!Serial1) { ; }
+  /** Define which ports to use as UART */
+  UART.setSerialPort(&Serial1);
+
+
 
 }
 
@@ -156,9 +170,9 @@ void pid() {
     Serial.print(y);
     Serial.println();
     // x=0;
-    rpm_sp[0] = map(x + w, -175, 175, max_rpm, -max_rpm);
-    rpm_sp[1] = map(-0.5 * x - 0.852 * y + w, -175, 175, max_rpm, -max_rpm);
-    rpm_sp[2] = map(-0.5 * x + 0.866 * y + w, -175, 175, max_rpm, -max_rpm);
+    rpm_sp[0] = map(x + 0.4*w, -175, 175, max_rpm, -max_rpm);
+    rpm_sp[1] = map(-0.5 * x - 0.852 * y + 0.4*w, -175, 175, max_rpm, -max_rpm);
+    rpm_sp[2] = map(-0.5 * x + 0.866 * y + 0.4*w, -175, 175, max_rpm, -max_rpm);
 
     for (int i = 0; i < 3; i++) {
       // Serial.printf("RPM_%d_input:%0.2f  ", i + 1, rpm_sp[i]);
@@ -184,6 +198,15 @@ void pid() {
     lastError[i] = error[i];
     // Serial.printf("RPM_%d_input:%0.2f  ",i+1, rpm_sp[i]);
   }
+  if(jetdata.r1)
+  {
+      UART.setRPM(bldc_rpm*7);
+  }
+  else{
+
+          UART.setRPM(0);
+
+  }
 
 
   }
@@ -191,6 +214,11 @@ void pid() {
 
 
 void loop() {
+
+  if(Serial.available())
+  {
+bldc_rpm=Serial.readString().toInt();
+  }
   Serial.println("Main loop");
   con.MaintainConnection(false);
   con.getData(true);
@@ -239,8 +267,14 @@ void loop() {
   }
   if(jetdata.square==1)
   {
-        digitalWrite(feed_dir,HIGH);
+        digitalWrite(feed_dir,LOW);
     analogWrite(feed_pwm,0*64);
+  }
+
+    if(jetdata.l1==1)
+  {
+        digitalWrite(feed_dir,LOW);
+    analogWrite(feed_pwm,255*64);
   }
 
 
