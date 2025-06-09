@@ -3,7 +3,7 @@
 #include <Pixy2.h>
 
 // Create PCA9685 and Pixy2 objects
-Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);
 
 #define rc0    7   // Relay 0
 #define rc1    8   // Relay 1
