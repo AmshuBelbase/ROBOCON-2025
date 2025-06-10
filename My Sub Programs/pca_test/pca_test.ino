@@ -1,50 +1,81 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
-#include <Pixy2.h>
 
-// Create PCA9685 and Pixy2 objects
-Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);
+// Class to initialize PCA9685 with retry
+class PCAHandler {
+public:
+  Adafruit_PWMServoDriver pwm;
+  uint8_t i2c_address; // address = 0x40 or 0x41 based on pca 
+  bool initialized = false;
 
-#define rc0    7   // Relay 0
-#define rc1    8   // Relay 1
+  PCAHandler(uint8_t address) : pwm(address), i2c_address(address), initialized(false) {} //contrustor to initialize 
+
+  void tryInitialize(bool relay_1_state, bool relay_2_state) {
+    Wire.beginTransmission(i2c_address); //intilizing connection
+    // works if pca found at set address
+    if (Wire.endTransmission() == 0) {
+      if(!initialized){
+        pwm.begin();
+        pwm.setPWMFreq(50); // For relays 
+        pwm.setPWM(12, 0, relay_1_state?4095:0); // Channel 12 OFF
+        pwm.setPWM(13, 0, relay_2_state?4095:0); // Channel 13 OFF
+        Serial.print("PCA Intitalized with current state ✅");
+      }
+      initialized = true; 
+    } else {
+      if(initialized){
+        Serial.print("PCA disconnected ❌");
+      }
+      initialized = false;
+    }
+  }
+};
+
+// Create PCA9685 handler object
+PCAHandler pca(0x41);
+
+// Relay channels
+#define RELAY_1 12
+#define RELAY_2 13
 
 // Relay states
-bool rs0 = false;
-bool rs1 = false;
+bool relay1_state = false;
+bool relay2_state = false;
 
-void setup() 
-{
-  // Initialize PCA9685
-  pwm.begin();
-  pwm.setPWMFreq(50);  // For servos and relays (50 Hz)
+uint32_t checkTimer = millis();
 
-  // Initialize all outputs to LOW
-  //pwm.setPWM(channel, ON, OFF)
-  // ON tick in duty cycle 
-  // OFF tick in duty cycle 
-  pwm.setPWM(rc0, 0, 0);
-  pwm.setPWM(rc1, 0, 0);
+
+void setup() {
+  Serial.begin(9600);
+  Wire.begin();
+  delay(1000);
+  // Retry loop until PCA9685 is available
+  while (!pca.initialized) {
+    pca.tryInitialize(relay1_state, relay2_state);
+    delay(500); // Wait before retrying
+  }
+
+  Serial.println("Ready to receive commands: '1' for Relay 12, '2' for Relay 13.");
 }
 
-void loop()
-{
-  // Serial input to control devices
-  while (Serial.available()) 
-  {
+void loop() {
+  if (millis() - checkTimer > 1000){
+    pca.tryInitialize(relay1_state, relay2_state);
+    checkTimer = millis();
+  }
+  while (Serial.available()) {
     char ch = Serial.read();
-
-    // Relay controls
-    if (ch == '0') toggleRelay(rc0, rs0);
-    if (ch == '1') toggleRelay(rc1, rs1);
+    if (ch == '1') toggleRelay(RELAY_1, relay1_state);
+    if (ch == '2') toggleRelay(RELAY_2, relay2_state);
   }
 }
 
-void toggleRelay(uint8_t channel, bool &state) 
-{
-  state = !state; // Toggle state
-  pwm.setPWM(channel, state ? 0 : 4095, state ? 4095 : 0);
+// Toggle relay ON/OFF
+void toggleRelay(uint8_t channel, bool &state) {
+  state = !state;
+  pca.pwm.setPWM(channel, 0, state ? 4095 : 0);
   Serial.print("Relay ");
   Serial.print(channel);
-  Serial.print(": ");
+  Serial.print(" is now ");
   Serial.println(state ? "ON" : "OFF");
 }
