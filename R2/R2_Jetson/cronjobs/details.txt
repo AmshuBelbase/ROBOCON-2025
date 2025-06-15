@@ -1,0 +1,6 @@
+make sure there are no spaces between =
+
+wifi=srmrobocon
+ps4=24:A6:FA:59:A6:63
+
+
