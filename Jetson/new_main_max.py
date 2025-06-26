@@ -25,7 +25,7 @@ mapped_pwm_april = 0
 joystick = None
 text_mode = False
 
-
+bot = 1 # 1 for R1 and 2 for R2
 
 R = {
     1: {
@@ -60,11 +60,7 @@ R = {
     }
 }
 
-bot = 1
-
 # Process for Camera and YOLO Detection
-
-
 def zed2_process(shared):
 
     # Class for Normal Webcam
