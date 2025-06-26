@@ -97,7 +97,7 @@ def zed2_process(shared):
             # === Tag parameters ===
             self.tag_size = 0.305  # Real-world tag size in centimeters (e.g., 15 cm)  
             #constants for passing (apriltag)
-            self.calib_data = np.load(r'CameraCalibration/MultiMatrixLenevo.npz')  # Replace with your filename
+            self.calib_data = np.load(r'CameraCalibration/MultiMatrixzed21080.npz')  # Replace with your filename
             self.camera_matrix = self.calib_data['camMatrix']
             self.dist_coeffs = self.calib_data['distCoef']
             # === Extract intrinsics for AprilTag detector ===
@@ -160,7 +160,8 @@ def zed2_process(shared):
                 frame_height, frame_width = self.frame.shape[:2]
 
                 cv2.circle(self.frame, (frame_width//2, frame_height), 6, (255, 255, 0), -1)
-                cv2.line(self.frame, (frame_width//2, frame_height), center, (0, 255, 255), 2)
+                cv2.line(self.frame, (frame_width//2
+                , frame_height), center, (0, 255, 255), 2)
 
 
                                
@@ -389,8 +390,8 @@ def zed2_process(shared):
 
     # Initialize camera
 
-    z = Normal_WebCam()
-    # z = ZED2_feed()   
+    # z = Normal_WebCam()
+    z = ZED2_feed()   
 
     FRAME_SKIP = 5
 
@@ -431,7 +432,7 @@ def zed2_process(shared):
                     pass_obj.get_tags(frame = frame)
                     pass_obj.process_tags()
                     offset = pass_obj.get_alignment_offset()
-                    shared["bldc_rpm"] = pass_obj.get_distance_then_rpm()
+                    # shared["bldc_rpm"] = pass_obj.get_distance_then_rpm()
                     # cv2.rectangle(frame, (center - err_off,0), (center + err_off,frame_height), color=(255, 0, 0), thickness=-1)
                 elif shared["turn_mode"] == "Shooting":
                     FRAME_SKIP = 5
@@ -442,7 +443,7 @@ def zed2_process(shared):
                     shared["bldc_rpm"] = shoot_obj.get_distance_then_rpm()
                 else:
                     offset = 0
-                    shared["bldc_rpm"] = 0
+                    # shared["bldc_rpm"] = 0
                 
                 pwm_min , pwm_max = 0, 0
 
@@ -464,7 +465,7 @@ def zed2_process(shared):
                         x = math.acos(1 - 2 * ease) / math.pi
                         rpm = rpm_min + x * (rpm_max - rpm_min)
                         return rpm
-                    pwm_thres = [105, 145, 180, 200]
+                    pwm_thres = [75, 140, 160, 180]
                     thresholds = [
                         (int(center*0.8), pwm_thres[3]),
                         (int(center*0.6), pwm_thres[2]),
@@ -488,7 +489,7 @@ def zed2_process(shared):
                     shared["pwm"] = offset_to_rpm(abs(offset), pwm_min, pwm_max, 0, frame_width//2)
 
                     # shared["pwm"] = map_range(abs(offset), 0, frame_width//2, 0, 15) 
-                    shared["pwm"] = -shared["pwm"] if offset < 0 else shared["pwm"]
+                    shared["pwm"] = -shared["pwm"] if offset > 0 else shared["pwm"]
 
 
                 
@@ -520,10 +521,10 @@ def zed2_process(shared):
                     frame= cv2.line(frame, (int(center + (center*(i/10))), 0), (int(center + (center*(i/10))),frame_height), (255,255,255), 1)
                 
 
-                frame= cv2.line(frame, (center, 0), (center,frame_height), (255,255,255), 1)
-                frame= cv2.line(frame, (center - err_off,0), (center - err_off,frame_height), (255,0,255), 1)
-                frame= cv2.line(frame, (center + err_off,0), (center + err_off,frame_height), (255,255,0), 1)
-                
+                frame= cv2.line(frame, (frame_width//2, 0), (frame_width//2,frame_height), (255,255,255), 1)
+                frame= cv2.line(frame, (frame_width//2 - err_off,0), (frame_width//2 - err_off,frame_height), (255,0,255), 1)
+                frame= cv2.line(frame, (frame_width//2 + err_off,0), (frame_width//2 + err_off,frame_height), (255,255,0), 1)
+    
                 cv2.namedWindow("Distance", cv2.WINDOW_NORMAL)
                 cv2.resizeWindow("Distance", 1080,720)
                 cv2.imshow("Distance", frame)
@@ -538,7 +539,7 @@ def zed2_process(shared):
             #Send error message and try again
             shared['pwm'] = 0
             shared['bldc_rpm'] = 0 
-            print("Can't receive frame. Trying again ...") 
+            print("Can't receive framennnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn. Trying again ...") 
             print(f"Ye error hua camera ke saath: {e}")
             time.sleep(1)
             continue
@@ -637,7 +638,10 @@ def ps4_process(shared):
                 shared["square"] = square
                 shared["circle"] = circle
                 shared["triangle"] = triangle
-
+                
+                with open('rpmm.txt','r') as file:
+                    number = int(file.read().strip())
+                shared['bldc_rpm']=number
                 if last_touch == 0 and touch_button == 1:
                     shared["touch_button"] = not shared["touch_button"]
 
@@ -656,7 +660,7 @@ def ps4_process(shared):
  
                 print(int(shared['axis'][0]), int(shared['axis'][1]), int(shared['axis'][2]), int(shared['axis'][3]), int(shared['l2']),int(shared['r2']),
                         int(shared['r1']),int(shared['l1']), int(shared['cross']), int(shared['square']), int(shared['circle']),
-                            int(shared['triangle']), dpad_up, dpad_left, dpad_down, shared["touch_button"], shared["turn_mode"])
+                            int(shared['triangle']), dpad_up, dpad_left, dpad_down, shared["touch_button"], shared["turn_mode"],shared["bldc_rpm"])
 
             except pygame.error:
                 print("Error in accessing values")
