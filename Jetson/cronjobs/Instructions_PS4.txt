@@ -1,0 +1,24 @@
+IF PS4 IS RANDOMLY DISCONNECTED AND IS NOT CONNECTING AGAIN BY ITS OWN,
+1. sudo systemctl restart bluetooth
+2. bluetoothctl
+3. trust address_ps4
+
+
+IF YOU ARE NOT ABLE TO CONNECT PS4 BY ANY CHANCE: FOLLOW THIS :|
+
+1. sudo systemctl restart bluetooth
+2. bluetoothctl
+3. Now, you will come inside bluetoothctl
+4. remove address_ps4
+5. scan on
+6. trust address_ps4
+7. pair address_ps4
+8. exit once paired
+
+
+IF YOU ARE NOT ABLE TO ACCESS THE PS4 DATA INSIDE PROGRAM OR ELSEWHERE
+
+1. sudo usermod -aG bluetooth $USER
+2. getent group bluetooth
+3. sudo usermod -aG input $USER
+4. getent group input

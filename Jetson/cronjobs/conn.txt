@@ -1,0 +1,15 @@
+-----<<<<-----
+wifi=srmrobocon
+srmrobocon
+Already connected to srmrobocon.
+----->>>>-----
+-----<<<<-----
+wifi=srmrobocon
+srmrobocon
+Already connected to srmrobocon.
+----->>>>-----
+-----<<<<-----
+wifi=srmrobocon
+srmrobocon
+Already connected to srmrobocon.
+----->>>>-----
