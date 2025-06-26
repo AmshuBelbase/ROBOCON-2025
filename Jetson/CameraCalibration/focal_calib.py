@@ -1,6 +1,6 @@
 import numpy as np
 
-data = np.load('MultiMatrixzed21080.npz')  # Replace with your actual filename
+data = np.load('CameraCalibration/MultiMatrixzed21080.npz')  # Replace with your actual filename
 print(data.files)
 camera_matrix = data['camMatrix']
 print("Camera Matrix:\n", camera_matrix)

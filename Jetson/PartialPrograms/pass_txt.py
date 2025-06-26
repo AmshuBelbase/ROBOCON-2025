@@ -392,7 +392,7 @@ def ps4_process(shared):
                 if shared['dist_pass']==0 or pass_bldc>100000:
                     pass_bldc = 0
                 number=0
-                with open('rpm.txt', 'r') as file:
+                with open('PartialPrograms/rpm.txt', 'r') as file:
                     number = int(file.readline().strip())
 
                 
