@@ -1,0 +1,15 @@
+-----<<<<-----
+ps4=24:A6:FA:59:A6:63
+24:A6:FA:59:A6:63
+24:A6:FA:59:A6:63 Device is already connected.
+----->>>>-----
+-----<<<<-----
+ps4=24:A6:FA:59:A6:63
+24:A6:FA:59:A6:63
+24:A6:FA:59:A6:63 Device is already connected.
+----->>>>-----
+-----<<<<-----
+ps4=24:A6:FA:59:A6:63
+24:A6:FA:59:A6:63
+24:A6:FA:59:A6:63 Device is already connected.
+----->>>>-----
