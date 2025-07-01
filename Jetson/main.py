@@ -25,18 +25,19 @@ mapped_pwm_april = 0
 joystick = None
 text_mode = False
 
-bot = 1 # 1 for R1 and 2 for R2
+bot = 1  # 1 for R1 and 2 for R2
 
 R = {
     1: {
         'cam_file': r"CameraCalibration/MultiMatrixzed21080.npz",
         'CONST': 1067.6,
         'shoot': {
-            'distances': np.array([234, 272, 304, 307, 317, 333, 374, 374, 404, 434, 434, 470, 500,534]),
+            'distances': np.array([234, 272, 304, 307, 317, 333, 374, 374, 404, 434, 434, 470, 500, 534]),
             'rpm': np.array([2522.5, 2620, 2712.5, 2715, 2725, 2820, 2890, 2950, 3040, 3075, 3110, 3227.5, 3355, 3425]),
-            'pwm_thres': [115, 160, 180, 190, 200],
-            'shift_x': 0,
-            'err_off': 6
+            'pwm_thres_max': [115, 185, 190, 195, 200],
+            'pwm_thres_min': [0, 0, 0, 0, 0],
+            'shift_x': -20,
+            'err_off': 6  # either side of Center line
         }
     },
     2: {
@@ -45,15 +46,17 @@ R = {
         'pass': {
             'distances': np.array([126, 140, 151, 163, 170, 183, 190, 204, 218, 224, 228, 240, 250, 265, 273, 280, 295]),
             'rpm': np.array([1500, 1620, 1700, 1780, 1870, 1930, 1950, 2020, 2070, 2145, 2195, 2255, 2325, 2395, 2435, 2455, 2495]),
-            'pwm_thres': [70, 100, 115, 150, 160],
-            'shift_x': 0,
+            'pwm_thres_max': [70, 100, 115, 155, 160],
+            'pwm_thres_min': [0, 0, 0, 0, 0],
+            'shift_x': -20,
             'err_off': 30
-            
+
         },
         'shoot': {
             'distances': np.array([244, 274, 307, 332, 364, 370, 375, 380, 385, 400, 430, 450, 450, 470, 480, 510]),
             'rpm': np.array([2680, 2802, 2927, 3010, 3075, 3130, 3170, 3230, 3300, 3315, 3400, 3450, 3560, 3616, 3635, 3670]),
-            'pwm_thres': [30, 43, 55, 69, 89],
+            'pwm_thres_max': [30, 43, 55, 69, 89],
+            'pwm_thres_min': [0, 0, 0, 0, 0],
             'shift_x': 0,
             'err_off': 10,
         }
@@ -61,13 +64,15 @@ R = {
 }
 
 # Process for Camera and YOLO Detection
+
+
 def zed2_process(shared):
 
     # Class for Normal Webcam
     class Normal_WebCam:
         def __init__(self):
             print("Initializing Camera...")
-            self.cap = cv2.VideoCapture(0)
+            self.cap = cv2.VideoCapture(1)
             if not self.cap.isOpened():
                 print("Cannot open camera")
             else:
@@ -317,16 +322,16 @@ def zed2_process(shared):
             return pass_rpm
 
         def get_alignment_offset(self):
-            text = f"OFFSET {self.offset}"
-            position = (0 + 40, 0 + 40)
-            self.draw_text_with_background(
-                text=text, org=position,
-                font=cv2.FONT_HERSHEY_SIMPLEX,
-                font_scale=0.7,
-                text_color=(255, 255, 255),   # White text
-                thickness=2,
-                bg_color=(0, 0, 0)            # Black background
-            )
+            # text = f"OFFSET {self.offset}"
+            # position = (0 + 40, 0 + 40)
+            # self.draw_text_with_background(
+            #     text=text, org=position,
+            #     font=cv2.FONT_HERSHEY_SIMPLEX,
+            #     font_scale=0.7,
+            #     text_color=(255, 255, 255),   # White text
+            #     thickness=2,
+            #     bg_color=(0, 0, 0)            # Black background
+            # )
             return self.offset
 
     class Shooting:
@@ -339,8 +344,9 @@ def zed2_process(shared):
             self.BASKET_WIDTH_CM = 47.2
             self.CONST = R[bot]['CONST']  # Calibrated constant
             self.distance = 0
-            self.distances_window = deque(maxlen=10)  ## Stores last 10 distances
-            self.aligned = False                      ## New flag
+            self.distances_window = deque(
+                maxlen=10)  # Stores last 10 distances
+            self.aligned = False  # New flag
             distances = R[bot]['shoot']['distances']
             rpm = R[bot]['shoot']['rpm']
             self.coefficients = np.polyfit(distances, rpm, 2)
@@ -408,7 +414,7 @@ def zed2_process(shared):
                     self.distance = unit_length * self.CONST
                     # print(f"Distance to basket: {self.distance:.2f} cm")
 
-                    ## storing data continously in the deque
+                    # storing data continously in the deque
                     self.distances_window.append(self.distance)
 
                     self.offset = self.x_center - frame_width // 2
@@ -432,11 +438,11 @@ def zed2_process(shared):
                     bg_color=(0, 0, 0)            # Black background
                 )
                 return 0
-            
-            max_dist= sum(self.distances_window)/len(self.distances_window)
+
+            max_dist = sum(self.distances_window)/len(self.distances_window)
             shoot_rpm = self.coefficients[0] * max_dist**2 + \
-            self.coefficients[1] * max_dist + self.coefficients[2]*1.02
-            
+                self.coefficients[1] * max_dist + self.coefficients[2]*1.02
+
             text = f"Distance {max_dist:.2f} RPM {shoot_rpm}"
             position = (0 + 40, 0 + 20)
             self.draw_text_with_background(
@@ -450,16 +456,16 @@ def zed2_process(shared):
             return shoot_rpm
 
         def get_alignment_offset(self):
-            text = f"OFFSET {self.offset}"
-            position = (0 + 40, 0 + 40)
-            self.draw_text_with_background(
-                text=text, org=position,
-                font=cv2.FONT_HERSHEY_SIMPLEX,
-                font_scale=0.7,
-                text_color=(255, 255, 255),   # White text
-                thickness=2,
-                bg_color=(0, 0, 0)            # Black background
-            )
+            # text = f"OFFSET {self.offset}"
+            # position = (0 + 40, 0 + 40)
+            # self.draw_text_with_background(
+            #     text=text, org=position,
+            #     font=cv2.FONT_HERSHEY_SIMPLEX,
+            #     font_scale=0.7,
+            #     text_color=(255, 255, 255),   # White text
+            #     thickness=2,
+            #     bg_color=(0, 0, 0)            # Black background
+            # )
             return self.offset
 
     # Initialize camera
@@ -499,12 +505,16 @@ def zed2_process(shared):
                 err_off = 0
                 center = frame_width // 2
 
-                # get offset of target and required bldc rpm based on Target MODE
-
                 shift_x = 0
 
+                pwm_thres_max = [0, 0, 0, 0, 0]
+                pwm_thres_min = [0, 0, 0, 0, 0]
+                offset = 0
+                shared["bldc_rpm"] = 0
+
                 if shared["turn_mode"] == "Passing" and bot == 2:
-                    pwm_thres = R[bot]['pass']['pwm_thres']
+                    pwm_thres_max = R[bot]['pass']['pwm_thres_max']
+                    pwm_thres_min = R[bot]['pass']['pwm_thres_min']
                     shift_x, FRAME_SKIP, err_off = R[bot]['pass']['shift_x'], 1, R[bot]['pass']['err_off']
                     pass_obj.get_tags(frame=frame)
                     pass_obj.process_tags()
@@ -517,7 +527,8 @@ def zed2_process(shared):
                         shared["bldc_rpm"] = number
 
                 elif shared["turn_mode"] == "Shooting":
-                    pwm_thres = R[bot]['shoot']['pwm_thres']
+                    pwm_thres_max = R[bot]['shoot']['pwm_thres_max']
+                    pwm_thres_min = R[bot]['shoot']['pwm_thres_min']
                     shift_x, FRAME_SKIP, err_off = R[bot]['shoot']['shift_x'], 1, R[bot]['shoot']['err_off']
                     shoot_obj.get_hoop(frame=frame)
                     shoot_obj.process_hoop()
@@ -528,16 +539,15 @@ def zed2_process(shared):
                         with open('PartialPrograms/rpm.txt', 'r') as file:
                             number = int(file.readline().strip())
                         shared["bldc_rpm"] = number
-                else:
-                    pwm_thres = [0, 0, 0, 0, 0]
-                    offset = 0
-                    shared["bldc_rpm"] = 0
 
                 pwm_min, pwm_max = 0, 0
 
-                count_missed_mode = {"Passing": 1, "Shooting": 1}
+                count_missed_mode = {"Passing": 1, "Shooting": 5}
 
                 shifted_center = center + shift_x
+
+                total_bands = 10
+                band_width = frame_width // total_bands
 
                 # Get Rotational RPM based on the offset and required Mapping
                 if (center+offset) > (shifted_center - err_off) and (center+offset) < (shifted_center + err_off):
@@ -552,44 +562,40 @@ def zed2_process(shared):
                 elif (center+offset) < (shifted_center - err_off) or (center+offset) > (shifted_center + err_off):
                     count_missed = 0
                     # print("!!!!!!!", (center+offset), (shifted_center - err_off), (shifted_center + err_off))
-        
-                    def offset_to_rpm(offset, rpm_min=0, rpm_max=20, offset_min=0, offset_max=300):
+
+                    def offset_to_rpm(offset, offset_min=0, offset_max=300, rpm_min=0, rpm_max=20, ):
                         ease = (offset - offset_min) / \
                             (offset_max - offset_min)
                         x = math.acos(1 - 2 * ease) / math.pi
                         rpm = rpm_min + x * (rpm_max - rpm_min)
                         return rpm
 
-                    thresholds = [
-                        (int(center*0.8), pwm_thres[4]),  # > 80% of width
-                        (int(center*0.6), pwm_thres[3]),  # > 60% of width
-                        (int(center*0.4), pwm_thres[2]),  # > 40% of width
-                        (int(center*0.2), pwm_thres[1]),  # > 20% of width
-                        (int(center*0), pwm_thres[0]),    # > 0% of width
-                    ]
-                    thres_mins = {pwm_thres[4]: 0, pwm_thres[3]: 0,
-                                  pwm_thres[2]: 0, pwm_thres[1]: 0, pwm_thres[0]: 0}
+                    new_offset = offset - shift_x
 
-                    # Loop to find the appropriate pwm_max
-                    for threshold, value in thresholds:
-                        if abs(offset) > threshold:
-                            pwm_max = value
-                            pwm_min = thres_mins[value]
-                            break
-                        else:
-                            # Default to the smallest value
-                            pwm_max = thresholds[-1][1]
-                            pwm_min = thres_mins[pwm_max]
+                    current_band_index = math.floor(
+                        abs(new_offset) / band_width)
+
+                    pwm_max = pwm_thres_max[min(
+                        current_band_index, len(pwm_thres_max) - 1)]
+                    pwm_min = pwm_thres_min[min(
+                        current_band_index, len(pwm_thres_max) - 1)]
+
+                    max_rem_width = center + abs(shift_x)
 
                     shared["pwm"] = offset_to_rpm(
-                        abs(offset), pwm_min, pwm_max, 0, frame_width//2)
-
-                    # shared["pwm"] = map_range(abs(offset), 0, frame_width//2, 0, 15)
+                        abs(new_offset), 0, max_rem_width, pwm_min, pwm_max)
 
                     shared["pwm"] = - \
-                        shared["pwm"] if offset < 0 else shared["pwm"]
+                        shared["pwm"] if new_offset < 0 else shared["pwm"]
 
-                text = f"{shared['turn_mode']} PWM {shared['pwm']} {(center+offset)} {shifted_center - err_off} {shifted_center} {shifted_center + err_off} {shared['bldc_rpm']}"
+                for i in range(1, total_bands, 1):
+                    frame = cv2.line(frame,
+                                     (int((band_width*i)+shift_x), 0),
+                                     (int((band_width*i)+shift_x), frame_height),
+                                     (255, 255, 255), 2)
+
+                text = f"{shared['turn_mode']}, PWM_MIN:{pwm_min}, PWM_MAX:{pwm_max} PWM: {shared['pwm']}, BLDC: {shared['bldc_rpm']}"
+
                 position = (0 + 40, 0 + 60)
                 shoot_obj.draw_text_with_background(
                     text=text, org=position,
@@ -600,7 +606,7 @@ def zed2_process(shared):
                     bg_color=(0, 0, 0),            # Black background
                     f=frame
                 )
-                text = f"{shifted_center - err_off} {offset} {shifted_center + err_off}"
+                text = f"{shifted_center - err_off}, {shifted_center}, {shifted_center + err_off}, {center+offset}, {offset}"
                 position = (0 + 40, 0 + 80)
                 shoot_obj.draw_text_with_background(
                     text=text, org=position,
@@ -612,28 +618,23 @@ def zed2_process(shared):
                     f=frame
                 )
 
-                for i in range(2, 9, 2):
-                    frame = cv2.line(frame, (int(shifted_center - (center*(i/10))), 0),
-                                     (int(shifted_center - (center*(i/10))), frame_height), (255, 255, 255), 1)
-                    frame = cv2.line(frame, (int(shifted_center + (center*(i/10))), 0),
-                                     (int(shifted_center + (center*(i/10))), frame_height), (255, 255, 255), 1)
+                # # center line
+                # frame = cv2.line(frame, (shifted_center, 0),
+                #                  (shifted_center, frame_height), (255, 255, 255), 2)
 
-                # center line
-                frame = cv2.line(frame, (shifted_center, 0),
-                                 (shifted_center, frame_height), (255, 255, 255), 1)
                 # left offset line
                 frame = cv2.line(frame, (shifted_center - err_off, 0),
-                                 (shifted_center - err_off, frame_height), (255, 0, 0), 1)
+                                 (shifted_center - err_off, frame_height), (255, 0, 0), 2)
                 # right offset line
                 frame = cv2.line(frame, (shifted_center + err_off, 0),
-                                 (shifted_center + err_off, frame_height), (0, 0, 255), 1)
+                                 (shifted_center + err_off, frame_height), (0, 0, 255), 2)
 
                 # lines for limited Detections
                 if shared["turn_mode"] == "Shooting":
                     frame = cv2.line(frame, (0, frame_height//2),
-                                     (frame_width, frame_height//2), (255, 255, 0), 1)
+                                     (frame_width, frame_height//2), (255, 255, 0), 2)
                     frame = cv2.line(
-                        frame, (0, 10), (frame_width, 10), (255, 255, 0), 1)
+                        frame, (0, 10), (frame_width, 10), (255, 255, 0), 2)
 
                 if frame_width >= 1000:
                     cv2.namedWindow("Distance", cv2.WINDOW_NORMAL)
